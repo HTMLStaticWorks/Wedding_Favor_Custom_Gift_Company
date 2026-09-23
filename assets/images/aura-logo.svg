@@ -1,0 +1,25 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aura Favors">
+  <title>Aura Favors — Wedding &amp; Custom Gift Studio</title>
+  <g fill="none" stroke="#B86B77" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Elegant gift box icon -->
+    <rect x="10" y="24" width="30" height="24" rx="2" />
+    <path d="M7 18 H43 V24 H7 Z" fill="rgba(184,107,119,0.12)" />
+    <!-- Ribbon vertical -->
+    <line x1="25" y1="18" x2="25" y2="48" stroke-width="2.2" />
+    <!-- Ribbon Loops (Bow) -->
+    <path d="M25 18 C20 10, 12 12, 18 18 Z" fill="rgba(184,107,119,0.2)" />
+    <path d="M25 18 C30 10, 38 12, 32 18 Z" fill="rgba(184,107,119,0.2)" />
+  </g>
+  <text x="56" y="34"
+        font-family="'Outfit','Jost',sans-serif"
+        font-size="22"
+        font-weight="700"
+        letter-spacing="4"
+        fill="#B86B77">AURA FAVORS</text>
+  <text x="57" y="47"
+        font-family="'Jost',sans-serif"
+        font-size="9"
+        font-weight="500"
+        letter-spacing="2.5"
+        fill="#6B5B60">WEDDING &amp; GIFTS</text>
+</svg>

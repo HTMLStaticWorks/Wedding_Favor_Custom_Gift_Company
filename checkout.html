@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Favors | Favor Order Checkout</title>
+  <meta name="description" content="Secure Checkout — Review your wedding favor order list, select climate-controlled shipping, and complete your custom order request.">
+  <meta name="theme-color" content="#2C1E21">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <div class="drawer-overlay"></div>
+
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+      <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home2</a>
+      <a href="shop.html">Products</a>
+      <a href="branding.html">Branding</a>
+      <a href="bulk.html">Bulk</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer-actions">
+      <div class="drawer-utility">
+        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+        <span class="drawer-meta">Appearance &amp; Direction</span>
+      </div>
+      <a href="enquire.html" class="btn btn-primary btn-full" style="margin-top: var(--space-3); justify-content: center;">Enquire</a>
+      <p class="drawer-meta">Studio Care — +1 800 555 0199</p>
+    </div>
+  </aside>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home2</a>
+        <a href="shop.html">Products</a>
+        <a href="branding.html">Branding</a>
+        <a href="bulk.html">Bulk</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Stories</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
+        <a href="enquire.html" class="btn btn-sm btn-outline desk-only">Enquire</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
+        <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+
+    <!-- Page header -->
+    <header class="page-header container">
+      
+      <span class="eyebrow centered" data-reveal>Secure Checkout</span>
+      <h1 data-reveal style="--reveal-delay:1">Complete Favor Order</h1>
+      <p class="subtext" data-reveal style="--reveal-delay:2">
+        A demonstration checkout for custom wedding favor ordering. No payment is taken.
+      </p>
+    </header>
+
+    <section class="container tight" style="padding-top:0">
+
+      <ol class="checkout-steps" data-reveal="fade">
+        <li class="done"><span class="step-num"><i class="ph ph-check"></i></span><span>Bag</span></li>
+        <li class="active"><span class="step-num">2</span><span>Details &amp; Delivery</span></li>
+        <li><span class="step-num">3</span><span>Payment</span></li>
+        <li><span class="step-num">4</span><span>Confirmation</span></li>
+      </ol>
+
+      <div class="checkout-grid">
+
+        <!-- ==================== Form column ==================== -->
+        <div class="checkout-main" data-reveal="fade">
+          <form class="checkout-form" novalidate>
+
+            <div class="checkout-block">
+              <h3>Contact &amp; Event</h3>
+              <div class="form-group">
+                <label for="co-email">Email address</label>
+                <input type="email" id="co-email" name="email" class="form-control"
+                       placeholder="you@example.com" autocomplete="email" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label for="co-phone">Phone (for studio delivery updates)</label>
+                <input type="tel" id="co-phone" name="phone" class="form-control"
+                       placeholder="+1 555 000 0000" autocomplete="tel" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="co-news" name="newsletter" checked>
+                <label for="co-news">Email me about new seasonal scent launches and wax seal releases</label>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <h3>Delivery Address</h3>
+              <div class="field-row">
+                <div class="form-group">
+                  <label for="co-first">First name</label>
+                  <input type="text" id="co-first" name="first" class="form-control"
+                         placeholder="Elena" autocomplete="given-name" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-last">Last name</label>
+                  <input type="text" id="co-last" name="last" class="form-control"
+                         placeholder="Moretti" autocomplete="family-name" required>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="co-address">Street address</label>
+                <input type="text" id="co-address" name="address" class="form-control"
+                       placeholder="720 Bridal Way" autocomplete="street-address" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label for="co-address2">Apartment, suite, venue name (optional)</label>
+                <input type="text" id="co-address2" name="address2" class="form-control"
+                       placeholder="Grand Ballroom Concierge" autocomplete="address-line2">
+              </div>
+              <div class="field-row-3">
+                <div class="form-group">
+                  <label for="co-city">City</label>
+                  <input type="text" id="co-city" name="city" class="form-control"
+                         placeholder="New York" autocomplete="address-level2" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-postcode">Postcode</label>
+                  <input type="text" id="co-postcode" name="postcode" class="form-control"
+                         placeholder="10012" autocomplete="postal-code" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-country">Country</label>
+                  <select id="co-country" name="country" class="form-control" autocomplete="country-name" required>
+                    <option value="US">United States</option>
+                    <option value="IT">Italy</option>
+                    <option value="FR">France</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="JP">Japan</option>
+                  </select>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <h3>Delivery Method</h3>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="standard" data-cost="12" data-days="5" checked>
+                <span class="option-card-body">
+                  <strong>Standard Climate Freight — 3 to 5 working days</strong>
+                  <span>Complimentary on favor orders over $150, climate-safe tracked box.</span>
+                </span>
+                <span class="option-price">$12</span>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="express" data-cost="28" data-days="2">
+                <span class="option-card-body">
+                  <strong>Express Courier — 1 to 2 working days</strong>
+                  <span>Dispatched priority from studio for urgent wedding events.</span>
+                </span>
+                <span class="option-price">$28</span>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="atelier" data-cost="0" data-days="7">
+                <span class="option-card-body">
+                  <strong>Collect from Studio Showroom</strong>
+                  <span>New York or Milan — we will notify when your monogrammed favors are ready.</span>
+                </span>
+                <span class="option-price">Free</span>
+              </label>
+            </div>
+
+            <div class="checkout-block">
+              <h3>Payment</h3>
+
+              <label class="option-card">
+                <input type="radio" name="payment" value="card" checked>
+                <span class="option-card-body"><strong>Credit or debit card</strong></span>
+                <span class="pay-logos">
+                  <i class="ph ph-credit-card"></i>
+                </span>
+              </label>
+
+              <div class="form-group">
+                <label for="co-card">Card number</label>
+                <input type="text" id="co-card" name="card" class="form-control"
+                       placeholder="4242 4242 4242 4242" inputmode="numeric" autocomplete="cc-number" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="field-row">
+                <div class="form-group">
+                  <label for="co-expiry">Expiry</label>
+                  <input type="text" id="co-expiry" name="expiry" class="form-control"
+                         placeholder="MM / YY" inputmode="numeric" autocomplete="cc-exp" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-cvc">Security code</label>
+                  <input type="text" id="co-cvc" name="cvc" class="form-control"
+                         placeholder="123" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="co-name">Name on card</label>
+                <input type="text" id="co-name" name="cardname" class="form-control"
+                       placeholder="Elena Moretti" autocomplete="cc-name" required>
+                <span class="error-msg"></span>
+              </div>
+
+              <label class="option-card">
+                <input type="radio" name="payment" value="wallet">
+                <span class="option-card-body">
+                  <strong>Apple Pay / Google Pay / PayPal</strong>
+                  <span>You'll be redirected to authorise the payment.</span>
+                </span>
+                <span class="pay-logos">
+                  <i class="ph ph-apple-logo"></i>
+                  <i class="ph ph-google-logo"></i>
+                  <i class="ph ph-paypal-logo"></i>
+                </span>
+              </label>
+
+              <div class="form-group" style="margin-top:var(--space-4)">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="co-terms" name="terms" required>
+                  <label for="co-terms">I have read and accept the terms of sale and studio returns policy</label>
+                </div>
+                <span class="error-msg"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full place-order">Place Order</button>
+            <p class="cart-note" style="text-align:center">
+              <i class="ph ph-lock-simple"></i> Demonstration only — no card is charged and nothing is sent.
+            </p>
+          </form>
+        </div>
+
+        <!-- ==================== Summary column ==================== -->
+        <aside class="summary" data-reveal="fade" aria-label="Order summary">
+          <h3>Order Summary <span class="summary-count"></span></h3>
+
+          <div class="summary-items"></div>
+
+          <form class="promo-form" novalidate>
+            <input type="text" class="form-control promo-input" placeholder="Promotion code"
+                   aria-label="Promotion code" autocomplete="off">
+            <button type="submit" class="btn btn-outline">Apply</button>
+          </form>
+          <p class="promo-msg"></p>
+
+          <div class="summary-totals">
+            <div class="summary-line"><span>Subtotal</span><span data-total="subtotal">$0</span></div>
+            <div class="summary-line discount" hidden><span>Discount</span><span data-total="discount">$0</span></div>
+            <div class="summary-line"><span>Delivery</span><span data-total="shipping">Complimentary</span></div>
+            <div class="summary-line"><span>Estimated tax</span><span data-total="tax">$0</span></div>
+            <div class="summary-line grand"><span>Total</span><strong data-total="grand">$0</strong></div>
+          </div>
+
+          <p class="summary-trust"><i class="ph ph-shield-check"></i> Encrypted checkout &middot; Studio satisfaction guarantee</p>
+          <p class="cart-note" style="margin-bottom:0">
+            Try code <strong>FAVOR20</strong> for bulk discounts, or <strong>FREESHIP</strong>.
+          </p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <div class="container">
+      <div class="feature-row" data-reveal="fade">
+        <div class="feature-item">
+          <i class="ph ph-sliders"></i>
+          <h4>Low MOQs</h4>
+          <p>Starting at just 15-25 pcs</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-seal-check"></i>
+          <h4>Custom Monograms</h4>
+          <p>Hand-pressed wax seals</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-leaf"></i>
+          <h4>Organic Ingredients</h4>
+          <p>Soy wax &amp; botanical oils</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-truck"></i>
+          <h4>Worldwide Freight</h4>
+          <p>Reliable climate-safe shipping</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+          <p class="footer-about">Premier wedding favor &amp; custom gift studio. Crafting hand-poured candles, organic bath teas, and custom monogrammed keepsakes for fine celebrations.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Favor Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Candle Favors</a></li>
+            <li><a href="shop.html">Botanical Bath Salts</a></li>
+            <li><a href="shop.html">Edible Treats &amp; Honey</a></li>
+            <li><a href="shop.html">Custom Wax Sealed Boxes</a></li>
+            <li><a href="shop.html#new">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Concierge Services</h4>
+          <ul class="footer-links">
+            <li><a href="branding.html">Custom Monograms</a></li>
+            <li><a href="bulk.html">Bulk &amp; Wholesale Orders</a></li>
+            <li><a href="enquire.html">Sample Kit Request</a></li>
+            <li><a href="contact.html">Studio Booking</a></li>
+            <li><a href="enquire.html">Custom Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>The Studio</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="blog.html">Gifting Journal</a></li>
+            <li><a href="home2.html">Bespoke Lookbook</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="enquire.html">Enquiry Concierge</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aura Favors — Wedding &amp; Custom Gift Studio</span>
+        <nav>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close modal"><i class="ph ph-x"></i></button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"><i class="ph ph-check-circle"></i><span></span></div>
+  <button class="back-to-top" type="button" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>

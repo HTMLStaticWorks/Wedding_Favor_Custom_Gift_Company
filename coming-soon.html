@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Favors | New Gift Collection Coming Soon</title>
+  <meta name="description" content="Aura Favors' next seasonal wedding gift collection is coming soon. Subscribe for early access and sample boxes.">
+  <meta name="theme-color" content="#2C1E21">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero light-text">
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80" alt="Aura Favors campaign" fetchpriority="high">
+      </div>
+      <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(12,10,8,0.6), rgba(12,10,8,0.75));"></div>
+
+      <div class="hero-content centered">
+        <span class="eyebrow centered animate-fade-in">Seasonal Gift Suite</span>
+        <h1 class="display animate-fade-in delay-1">New Favor Collection<br><em class="italic-accent">Coming Soon</em></h1>
+        <p class="subtext animate-fade-in delay-2">
+          We are preparing our next collection of hand-poured botanical soy candles, wax-sealed favors, and luxury hampers. Leave your email to receive early access and sample kits.
+        </p>
+
+        <div class="countdown animate-fade-in delay-2">
+          <div><strong>14</strong><span>Days</span></div>
+          <div><strong>08</strong><span>Hours</span></div>
+          <div><strong>45</strong><span>Minutes</span></div>
+          <div><strong>12</strong><span>Seconds</span></div>
+        </div>
+
+        <form class="newsletter-form animate-fade-in delay-3" onsubmit="event.preventDefault(); window.Aura &amp;&amp; window.Aura.toast('Subscribed! We will notify you on launch day.', 'ph-check-circle'); this.reset();" style="margin: 0 auto;">
+          <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address" required>
+          <button type="submit" class="btn btn-light">Notify Me</button>
+        </form>
+        <p class="newsletter-note">No spam. One message, on release day.</p>
+      </div>
+    </section>
+  </main>
+  <button class="back-to-top" type="button" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Favors | Custom Branding &amp; Monogram Studio</title>
+  <meta name="description" content="Configure custom branding, hand-pressed wax seals, and personalized monograms for your wedding favors and gift hampers.">
+  <meta name="theme-color" content="#2C1E21">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <div class="drawer-overlay"></div>
+
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+      <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home2</a>
+      <a href="shop.html">Products</a>
+      <a href="branding.html" class="active">Branding</a>
+      <a href="bulk.html">Bulk</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer-actions">
+      <div class="drawer-utility">
+        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+        <span class="drawer-meta">Appearance &amp; Direction</span>
+      </div>
+      <a href="enquire.html" class="btn btn-primary btn-full" style="margin-top: var(--space-3); justify-content: center;">Enquire</a>
+      <p class="drawer-meta">Studio Care — +1 800 555 0199</p>
+    </div>
+  </aside>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home2</a>
+        <a href="shop.html">Products</a>
+        <a href="branding.html" class="active">Branding</a>
+        <a href="bulk.html">Bulk</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Stories</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="rtl-toggle" aria-label="Toggle text direction"></button>
+        <a href="enquire.html" class="btn btn-sm btn-outline desk-only">Enquire</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
+        <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+
+    <!-- Page header -->
+    <header class="page-header container">
+      <span class="eyebrow centered" data-reveal>Personalization Studio</span>
+      <h1 data-reveal style="--reveal-delay:1">Custom Branding &amp; Monograms</h1>
+      <p class="subtext" data-reveal style="--reveal-delay:2">
+        Select your custom wax seal colors, monogram typography, and packaging ribbon options to configure your personalized wedding favor suite.
+      </p>
+    </header>
+
+    <section class="container tight" style="padding-top:0">
+
+      <ol class="checkout-steps" data-reveal="fade">
+        <li class="done"><span class="step-num"><i class="ph ph-check"></i></span><span>Selection</span></li>
+        <li class="active"><span class="step-num">2</span><span>Monogram &amp; Details</span></li>
+        <li><span class="step-num">3</span><span>Digital Proof</span></li>
+        <li><span class="step-num">4</span><span>Confirmation</span></li>
+      </ol>
+
+      <div class="checkout-grid">
+
+        <!-- ==================== Form column ==================== -->
+        <div class="checkout-main" data-reveal="fade">
+          <form class="checkout-form" novalidate>
+
+            <div class="checkout-block">
+              <h3>Contact &amp; Event Details</h3>
+              <div class="form-group">
+                <label for="co-email">Email Address *</label>
+                <input type="email" id="co-email" name="email" class="form-control"
+                       placeholder="you@example.com" autocomplete="email" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label for="co-phone">Phone (for proof approval updates) *</label>
+                <input type="tel" id="co-phone" name="phone" class="form-control"
+                       placeholder="+1 555 000 0000" autocomplete="tel" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="co-news" name="newsletter" checked>
+                <label for="co-news">Send me digital proof updates and custom wax seal color swatches</label>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <h3>Monogram &amp; Couple Details</h3>
+              <div class="field-row">
+                <div class="form-group">
+                  <label for="co-first">Partner 1 Name *</label>
+                  <input type="text" id="co-first" name="first" class="form-control"
+                         placeholder="Sarah" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-last">Partner 2 Name *</label>
+                  <input type="text" id="co-last" name="last" class="form-control"
+                         placeholder="Michael" required>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="co-address">Monogram Initials (e.g. S &amp; M) *</label>
+                <input type="text" id="co-address" name="address" class="form-control"
+                       placeholder="S &amp; M" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label for="co-address2">Wedding Date / Custom Date Text (optional)</label>
+                <input type="text" id="co-address2" name="address2" class="form-control"
+                       placeholder="October 14, 2026">
+              </div>
+              <div class="field-row-3">
+                <div class="form-group">
+                  <label for="co-city">City / Venue</label>
+                  <input type="text" id="co-city" name="city" class="form-control"
+                         placeholder="New York, NY" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-postcode">Estimated Guest Count</label>
+                  <input type="text" id="co-postcode" name="postcode" class="form-control"
+                         placeholder="100" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-country">Wax Seal Stamp Color</label>
+                  <select id="co-country" name="country" class="form-control" required>
+                    <option value="RG">Rose Gold Metallic</option>
+                    <option value="GW">Champagne Gold</option>
+                    <option value="PW">Pearl White</option>
+                    <option value="BG">Botanical Green</option>
+                    <option value="MB">Midnight Burgundy</option>
+                  </select>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <h3>Branding Technique Options</h3>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="standard" data-cost="0" data-days="5" checked>
+                <span class="option-card-body">
+                  <strong>Hand-Pressed Monogram Wax Seals</strong>
+                  <span>Hand-stamped onto favor packaging with custom couple initials.</span>
+                </span>
+                <span class="option-price">Included</span>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="express" data-cost="15" data-days="2">
+                <span class="option-card-body">
+                  <strong>Gold Foil Embossed Cardstock Tags</strong>
+                  <span>Heavyweight cotton tags with metallic gold foil monogram lettering.</span>
+                </span>
+                <span class="option-price">+$15</span>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="atelier" data-cost="25" data-days="7">
+                <span class="option-card-body">
+                  <strong>Complete Deluxe Suite (Wax Seal + Foil Tag + Silk Ribbon)</strong>
+                  <span>Full hand-finished presentation with silk ribbons and engraved wooden lids.</span>
+                </span>
+                <span class="option-price">+$25</span>
+              </label>
+            </div>
+
+            <div class="checkout-block">
+              <h3>Proofing &amp; Payment Confirmation</h3>
+
+              <label class="option-card">
+                <input type="radio" name="payment" value="card" checked>
+                <span class="option-card-body"><strong>Digital Proof Approval First (Free)</strong></span>
+                <span class="pay-logos">
+                  <i class="ph ph-seal-check"></i>
+                </span>
+              </label>
+
+              <div class="form-group">
+                <label for="co-card">Credit or debit card (Proof deposit)</label>
+                <input type="text" id="co-card" name="card" class="form-control"
+                       placeholder="4242 4242 4242 4242" inputmode="numeric" autocomplete="cc-number" required>
+                <span class="error-msg"></span>
+              </div>
+              <div class="field-row">
+                <div class="form-group">
+                  <label for="co-expiry">Expiry</label>
+                  <input type="text" id="co-expiry" name="expiry" class="form-control"
+                         placeholder="MM / YY" inputmode="numeric" autocomplete="cc-exp" required>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                  <label for="co-cvc">Security code</label>
+                  <input type="text" id="co-cvc" name="cvc" class="form-control"
+                         placeholder="123" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="co-name">Name on card</label>
+                <input type="text" id="co-name" name="cardname" class="form-control"
+                       placeholder="Sarah &amp; Michael" autocomplete="cc-name" required>
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-group" style="margin-top:var(--space-4)">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="co-terms" name="terms" required>
+                  <label for="co-terms">I accept digital proof review policy and custom branding terms</label>
+                </div>
+                <span class="error-msg"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full place-order">Submit Branding Configuration</button>
+            <p class="cart-note" style="text-align:center">
+              <i class="ph ph-lock-simple"></i> Demonstration only — no card is charged and proof is sent to email.
+            </p>
+          </form>
+        </div>
+
+        <!-- ==================== Summary column ==================== -->
+        <aside class="summary" data-reveal="fade" aria-label="Order summary">
+          <h3>Branding Suite Summary <span class="summary-count"></span></h3>
+
+          <div class="summary-items"></div>
+
+          <form class="promo-form" novalidate>
+            <input type="text" class="form-control promo-input" placeholder="Promotion code"
+                   aria-label="Promotion code" autocomplete="off">
+            <button type="submit" class="btn btn-outline">Apply</button>
+          </form>
+          <p class="promo-msg"></p>
+
+          <div class="summary-totals">
+            <div class="summary-line"><span>Branding Base</span><span data-total="subtotal">$0</span></div>
+            <div class="summary-line discount" hidden><span>Discount</span><span data-total="discount">$0</span></div>
+            <div class="summary-line"><span>Digital Proof</span><span data-total="shipping">Complimentary</span></div>
+            <div class="summary-line"><span>Estimated tax</span><span data-total="tax">$0</span></div>
+            <div class="summary-line grand"><span>Total</span><strong data-total="grand">$0</strong></div>
+          </div>
+
+          <p class="summary-trust"><i class="ph ph-shield-check"></i> Encrypted configuration &middot; 100% Digital Proof Approval</p>
+          <p class="cart-note" style="margin-bottom:0">
+            Try code <strong>FAVOR20</strong> for volume discounts, or <strong>FREESHIP</strong>.
+          </p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <div class="container">
+      <div class="feature-row" data-reveal="fade">
+        <div class="feature-item">
+          <i class="ph ph-sliders"></i>
+          <h4>Low MOQs</h4>
+          <p>Starting at just 15-25 pcs</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-seal-check"></i>
+          <h4>Custom Monograms</h4>
+          <p>Hand-pressed wax seals</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-leaf"></i>
+          <h4>Organic Ingredients</h4>
+          <p>Soy wax &amp; botanical oils</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-truck"></i>
+          <h4>Worldwide Freight</h4>
+          <p>Reliable climate-safe shipping</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
+          <p class="footer-about">Premier wedding favor &amp; custom gift studio. Crafting hand-poured candles, organic bath teas, and custom monogrammed keepsakes for fine celebrations.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Favor Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Candle Favors</a></li>
+            <li><a href="shop.html">Botanical Bath Salts</a></li>
+            <li><a href="shop.html">Edible Treats &amp; Honey</a></li>
+            <li><a href="shop.html">Custom Wax Sealed Boxes</a></li>
+            <li><a href="shop.html#new">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Concierge Services</h4>
+          <ul class="footer-links">
+            <li><a href="branding.html">Custom Monograms</a></li>
+            <li><a href="bulk.html">Bulk &amp; Wholesale Orders</a></li>
+            <li><a href="enquire.html">Sample Kit Request</a></li>
+            <li><a href="contact.html">Studio Booking</a></li>
+            <li><a href="enquire.html">Custom Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>The Studio</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="blog.html">Gifting Journal</a></li>
+            <li><a href="home2.html">Bespoke Lookbook</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="enquire.html">Enquiry Concierge</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aura Favors — Wedding &amp; Custom Gift Studio</span>
+        <nav>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close modal"><i class="ph ph-x"></i></button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"><i class="ph ph-check-circle"></i><span></span></div>
+  <button class="back-to-top" type="button" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>

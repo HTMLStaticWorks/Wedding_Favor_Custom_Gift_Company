@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Aura Fashion — RTL Overrides
+   ========================================================================== */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Typography & labels ------------------------------------------------------ */
+[dir="rtl"] .subtext,
+[dir="rtl"] .hero-lede,
+[dir="rtl"] .split-body .subtext,
+[dir="rtl"] .newsletter-inner .subtext,
+[dir="rtl"] .footer-about { margin-left: auto; margin-right: 0; }
+
+/* The logo is an image now — it has no optical track to rebalance in RTL. */
+
+/* Product cards ------------------------------------------------------------ */
+[dir="rtl"] .product-card .card-inner,
+[dir="rtl"] .product-card .card-inner > *,
+[dir="rtl"] .product-title,
+/* .blog-card h3 is centred in both directions now — see style.css */
+[dir="rtl"] .tile-body h3,
+[dir="rtl"] .section-head-split h2,
+[dir="rtl"] .section-head-split .subtext,
+[dir="rtl"] .split-body h2,
+[dir="rtl"] .newsletter-inner h2,
+[dir="rtl"] .article-body h3 { text-align: right; }
+
+[dir="rtl"] .product-badge { left: auto; right: var(--space-2); }
+[dir="rtl"] .wishlist { right: auto; left: var(--space-2); }
+[dir="rtl"] .tile-index { left: auto; right: var(--space-5); }
+[dir="rtl"] .price-original { margin-right: 0; margin-left: var(--space-1); }
+
+/* Drawer ------------------------------------------------------------------- */
+[dir="rtl"] .drawer {
+  right: auto;
+  left: -100%;
+  border-left: 0;
+  border-right: 1px solid var(--color-hairline);
+  transition: left 0.6s var(--ease-out);
+}
+[dir="rtl"] .drawer.open { left: 0; right: auto; }
+[dir="rtl"] .drawer-links a::after { content: '\2196'; }
+
+/* Navigation & banner ------------------------------------------------------ */
+[dir="rtl"] .sale-banner a { margin-left: 0; margin-right: var(--space-2); }
+[dir="rtl"] .cart-count { right: auto; left: 1px; }
+[dir="rtl"] .nav-links a::after { transform-origin: left; }
+[dir="rtl"] .nav-links a:hover::after,
+[dir="rtl"] .nav-links a.active::after { transform-origin: right; }
+
+/* Directional icons -------------------------------------------------------- */
+[dir="rtl"] .link-arrow .ph-arrow-right,
+[dir="rtl"] .btn .ph-arrow-right,
+[dir="rtl"] .link-arrow .ph-arrow-left { transform: scaleX(-1); }
+[dir="rtl"] .tile-cta .ph-arrow-up-right { transform: scaleX(-1); }
+
+/* Forms & panels ----------------------------------------------------------- */
+[dir="rtl"] .error-msg { left: auto; right: 0; }
+[dir="rtl"] .auth-box form { text-align: right; }
+[dir="rtl"] .auth-aside { text-align: left; }
+[dir="rtl"] th, [dir="rtl"] td { text-align: right; }
+
+/* Editorial ---------------------------------------------------------------- */
+[dir="rtl"] .article-body blockquote {
+  border-left: 0;
+  border-right: 1px solid var(--color-accent);
+  padding-left: 0;
+  padding-right: var(--space-4);
+}
+[dir="rtl"] .newsletter::before {
+  background: linear-gradient(to left, rgba(12,10,8,0.86) 0%, rgba(12,10,8,0.62) 55%, rgba(12,10,8,0.35) 100%);
+}
+[dir="rtl"] .split-media-stack .stack-front { right: auto; left: 0; }
+[dir="rtl"] .feature-item { border-left: 0; border-right: 1px solid var(--color-hairline); }
+[dir="rtl"] .feature-item:first-child { border-right: 0; }
+
+/* Modal -------------------------------------------------------------------- */
+[dir="rtl"] .modal-close { right: auto; left: var(--space-3); }
+[dir="rtl"] .modal h3 { text-align: right; }
+
+/* Marquee travels the other way ------------------------------------------- */
+[dir="rtl"] .marquee-track { animation-direction: reverse; }
+
+/* Bag drawer --------------------------------------------------------------- */
+[dir="rtl"] .cart-drawer {
+  right: auto;
+  left: -100%;
+  border-left: 0;
+  border-right: 1px solid var(--color-hairline);
+  transition: left 0.6s var(--ease-out);
+}
+[dir="rtl"] .cart-drawer.open { left: 0; right: auto; }
+[dir="rtl"] .cart-head h3,
+[dir="rtl"] .cart-item-body h4,
+[dir="rtl"] .summary h3,
+[dir="rtl"] .summary-item h4,
+[dir="rtl"] .checkout-block > h3,
+[dir="rtl"] .promo-body h2,
+[dir="rtl"] .rail-head h2 { text-align: right; }
+[dir="rtl"] .promo-body .subtext,
+[dir="rtl"] .rail-head .subtext { margin-left: auto; margin-right: 0; }
+[dir="rtl"] .cart-size select {
+  padding: 3px 6px 3px 20px;
+  background-position: left 9px center, left 13px center;
+}
+[dir="rtl"] .cart-item { grid-template-columns: auto 1fr 88px; }
+[dir="rtl"] .cart-item .cart-thumb { grid-column: 3; }
+[dir="rtl"] .cart-item .cart-item-body { grid-column: 2; }
+[dir="rtl"] .cart-item .cart-remove { grid-column: 1; }
+
+/* Checkout ----------------------------------------------------------------- */
+[dir="rtl"] .checkout-steps li + li::before { margin-right: 0; margin-left: var(--space-1); }
+[dir="rtl"] .summary-item { grid-template-columns: auto 1fr 64px; }
+[dir="rtl"] .summary-item img { grid-column: 3; }
+[dir="rtl"] .summary-item > div { grid-column: 2; }
+[dir="rtl"] .summary-item .line-total { grid-column: 1; }
+[dir="rtl"] select.form-control {
+  background-position: left 8px center, left 12px center;
+  padding-left: var(--space-3);
+}
+[dir="rtl"] .pay-logos { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .promo-flag { left: auto; right: var(--space-4); }
+[dir="rtl"] .rail-btn .ph-arrow-left,
+[dir="rtl"] .rail-btn .ph-arrow-right { transform: scaleX(-1); }
+
+[dir="rtl"] .hero-content.centered .hero-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[dir="rtl"] .split-body.centered .subtext {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* This file loads after style.css, so the `text-align: right` rules above tie
+   on specificity and win — the centred variants have to restate themselves. */
+[dir="rtl"] .split-body.centered h2,
+[dir="rtl"] .newsletter-inner.centered h2 { text-align: center; }
+
+/* The generic .section-head-split rules above force right alignment, and the
+   blanket .subtext rule repins its margin — the centred variant reclaims both. */
+[dir="rtl"] .section-head-split.centered h2,
+[dir="rtl"] .section-head-split.centered .subtext { text-align: center; }
+[dir="rtl"] .section-head-split.centered .subtext {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The generic .promo-body rules above force right alignment — the centred
+   variant has to win them back. */
+[dir="rtl"] .promo-body.centered h2 { text-align: center; }
+[dir="rtl"] .promo-body.centered .subtext {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[dir="rtl"] .quote-author span {
+  text-align: right;
+}
+
+[dir="rtl"] .newsletter-inner.centered .subtext {
+  margin-left: auto;
+  margin-right: auto;
+}
