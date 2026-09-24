@@ -2375,8 +2375,8 @@ tbody tr:hover, tr:hover { background: var(--color-surface); }
     flex-direction: column !important;
     align-items: stretch !important;
     padding-top: calc(var(--nav-h) + var(--space-4)) !important;
-    padding-bottom: var(--space-10) !important;
-    margin-bottom: 0 !important;
+    padding-bottom: var(--space-6) !important;
+    margin-bottom: var(--space-6) !important;
     background-color: var(--color-surface) !important;
   }
   .page-header.light-text {
@@ -3714,6 +3714,32 @@ select.form-control option { background: var(--color-secondary); color: var(--co
     height: 240px !important;
     margin-top: var(--space-4) !important;
     margin-bottom: 0 !important;
+  }
+  .page-header {
+    padding-top: calc(var(--nav-h) + var(--space-4)) !important;
+    padding-bottom: var(--space-5) !important;
+    margin-bottom: var(--space-6) !important;
+  }
+  .page-header + section,
+  #vision-split,
+  #vision-split .split-body {
+    padding-top: var(--space-4) !important;
+  }
+  .feature-post.split {
+    padding-top: var(--space-4) !important;
+  }
+  .feature-post.split .split-body {
+    padding-top: var(--space-4) !important;
+    padding-bottom: var(--space-3) !important;
+  }
+  .feature-post h2 {
+    font-size: clamp(1.3rem, 5.2vw, 1.55rem) !important;
+    line-height: 1.25 !important;
+    margin-top: var(--space-2) !important;
+    margin-bottom: var(--space-3) !important;
+  }
+  .feature-post .blog-meta {
+    margin-bottom: var(--space-2) !important;
   }
 }
 
