@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const TAX_RATE = 0.08;
 
   const PROMOS = {
-    AURA20: { type: 'percent', value: 0.20, label: '20% seasonal event' },
+    FAVOR20: { type: 'percent', value: 0.20, label: '20% volume favor discount' },
+    AURA20: { type: 'percent', value: 0.20, label: '20% custom suite discount' },
     WELCOME10: { type: 'percent', value: 0.10, label: '10% first order' },
-    FREESHIP: { type: 'shipping', value: 0, label: 'Complimentary express' }
+    FREESHIP: { type: 'shipping', value: 0, label: 'Complimentary express shipping' }
   };
 
   let promo = null;
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="${item.image}" alt="${item.title}" loading="lazy">
       <div>
         <h4>${item.title}</h4>
-        <span class="meta">Size ${item.size} · Qty ${item.qty}</span>
+        <span class="meta">${item.size ? item.size + ' · ' : ''}Qty ${item.qty}</span>
       </div>
       <span class="line-total">${money(item.price * item.qty)}</span>
     </div>
@@ -70,10 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const tax = Math.max(0, sub - disc) * TAX_RATE;
     const grand = Math.max(0, sub - disc) + ship + tax;
     const n = window.AuraCart.count();
+    const isBrandingPage = window.location.pathname.includes('branding');
 
     els.items.innerHTML = items.length
       ? items.map(summaryItemHTML).join('')
-      : '<p class="cart-note">Your bag is empty — <a href="shop.html" class="link-underline">browse the collection</a>.</p>';
+      : isBrandingPage
+        ? '<p class="cart-note">Your favor selection is empty — <a href="shop.html" class="link-underline">browse favor catalog</a>.</p>'
+        : '<p class="cart-note">Your bag is empty — <a href="shop.html" class="link-underline">browse favor catalog</a>.</p>';
 
     if (els.itemCount) els.itemCount.textContent = n + (n === 1 ? ' item' : ' items');
 
@@ -86,10 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
     els.discount.textContent = '−' + money(disc);
 
     if (els.submitBtn) {
-      els.submitBtn.disabled = items.length === 0;
-      els.submitBtn.textContent = items.length === 0
-        ? 'Your Bag Is Empty'
-        : 'Place Order · ' + money(grand);
+      if (isBrandingPage) {
+        els.submitBtn.disabled = false;
+        els.submitBtn.textContent = items.length === 0
+          ? 'Submit Branding Configuration'
+          : 'Submit Branding Suite · ' + money(grand);
+      } else {
+        els.submitBtn.disabled = items.length === 0;
+        els.submitBtn.textContent = items.length === 0
+          ? 'Your Bag Is Empty'
+          : 'Place Order · ' + money(grand);
+      }
     }
   };
 
@@ -220,7 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
     els.form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      if (window.AuraCart.count() === 0) return;
+      const isBrandingPage = window.location.pathname.includes('branding');
+      if (!isBrandingPage && window.AuraCart.count() === 0) return;
 
       const { ok, firstBad } = validate();
       if (!ok) {
@@ -238,24 +250,30 @@ document.addEventListener('DOMContentLoaded', () => {
       const eta = deliveryWindow();
 
       const main = page.querySelector('.checkout-main');
+      const confirmationTitle = isBrandingPage
+        ? 'Thank you — your custom branding suite configuration is submitted.'
+        : 'Thank you — your custom favor order is confirmed.';
+      const confirmationSubtext = isBrandingPage
+        ? `A digital proof preview with your monogram initials has been sent to ${email}. Our studio concierge team will be in touch within 24 hours.`
+        : `A confirmation receipt has been sent to ${email}. Our concierge team will reach out with production and proof updates.`;
+
       main.innerHTML = `
         <div class="confirmation">
           <div class="check"><i class="ph ph-check"></i></div>
-          <span class="eyebrow centered">Order Confirmed</span>
-          <h2>Thank you — your pieces are on their way.</h2>
-          <p class="subtext">A confirmation has been sent to ${email}. Our client care team
-            will be in touch should anything need your attention.</p>
+          <span class="eyebrow centered">${isBrandingPage ? 'Branding Proof Submitted' : 'Order Confirmed'}</span>
+          <h2>${confirmationTitle}</h2>
+          <p class="subtext">${confirmationSubtext}</p>
           <div class="order-meta">
-            <div><span>Order</span><strong>${ref}</strong></div>
+            <div><span>Reference</span><strong>${ref}</strong></div>
             <div><span>Total</span><strong>${total}</strong></div>
-            <div><span>Arriving by</span><strong>${eta}</strong></div>
+            <div><span>Target Date</span><strong>${eta}</strong></div>
           </div>
           <div class="hero-actions" style="justify-content:center">
-            <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
-            <a href="contact.html" class="btn btn-outline">Client Care</a>
+            <a href="shop.html" class="btn btn-primary">Browse Favor Catalog</a>
+            <a href="contact.html" class="btn btn-outline">Studio Concierge</a>
           </div>
           <p class="cart-note" style="margin-top:var(--space-6)">
-            This is a demonstration checkout — no payment was taken and no order was placed.
+            This is a demonstration request — no card was charged and proof is sent to email.
           </p>
         </div>
       `;

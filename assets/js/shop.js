@@ -167,64 +167,43 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastFocused = null;
 
   const measureNote = `<p style="font-size:var(--text-small); color:var(--color-text-muted); margin-top:var(--space-3)">
-      Measurements are of the body, not the garment. Between two sizes, we recommend
-      the larger — alterations are complimentary on every order.
+      All favor dimensions are crafted in our studio. Digital proof review and custom ribbon swatch samples are complimentary on every order.
     </p>`;
 
   const sizeTables = {
-    tops: `
-      <span class="eyebrow">Fit Assurance</span>
-      <h3 id="modal-title">Tops — Size Guide</h3>
+    candles: `
+      <span class="eyebrow">Studio Specifications</span>
+      <h3 id="modal-title">Candle Favors — Size &amp; Burn Guide</h3>
       <table>
-        <thead><tr><th>Size</th><th>Bust (in)</th><th>Waist (in)</th></tr></thead>
+        <thead><tr><th>Favor Size</th><th>Height</th><th>Diameter</th><th>Est. Burn Time</th></tr></thead>
         <tbody>
-          <tr><td>XS</td><td>32</td><td>24</td></tr>
-          <tr><td>S</td><td>34</td><td>26</td></tr>
-          <tr><td>M</td><td>36</td><td>28</td></tr>
-          <tr><td>L</td><td>38.5</td><td>30.5</td></tr>
-          <tr><td>XL</td><td>41.5</td><td>33.5</td></tr>
+          <tr><td>Petite (2 oz)</td><td>2.0 in</td><td>1.8 in</td><td>~15 Hours</td></tr>
+          <tr><td>Standard (4 oz)</td><td>2.6 in</td><td>2.2 in</td><td>~30 Hours</td></tr>
+          <tr><td>Grand (8 oz)</td><td>3.5 in</td><td>3.0 in</td><td>~60 Hours</td></tr>
         </tbody>
       </table>${measureNote}
     `,
-    bottoms: `
-      <span class="eyebrow">Fit Assurance</span>
-      <h3 id="modal-title">Bottoms — Size Guide</h3>
+    packaging: `
+      <span class="eyebrow">Bespoke Finishes</span>
+      <h3 id="modal-title">Packaging &amp; Wax Seal Guide</h3>
       <table>
-        <thead><tr><th>Size</th><th>Waist (in)</th><th>Hips (in)</th></tr></thead>
+        <thead><tr><th>Option</th><th>Material</th><th>Monogram Area</th></tr></thead>
         <tbody>
-          <tr><td>XS</td><td>24</td><td>34</td></tr>
-          <tr><td>S</td><td>26</td><td>36</td></tr>
-          <tr><td>M</td><td>28</td><td>38</td></tr>
-          <tr><td>L</td><td>30.5</td><td>40.5</td></tr>
-          <tr><td>XL</td><td>33.5</td><td>43.5</td></tr>
+          <tr><td>Wax Seal Stamp</td><td>Metallic Rose Gold Wax</td><td>1.0 in Circular</td></tr>
+          <tr><td>Foil Embossed Tag</td><td>300gsm Cotton Cardstock</td><td>2.0 in x 3.5 in</td></tr>
+          <tr><td>Custom Ribbon</td><td>Double-Face Satin / Velvet</td><td>0.75 in Width</td></tr>
         </tbody>
       </table>${measureNote}
     `,
-    dresses: `
-      <span class="eyebrow">Fit Assurance</span>
-      <h3 id="modal-title">Dresses — Size Guide</h3>
+    quantities: `
+      <span class="eyebrow">Event Concierge</span>
+      <h3 id="modal-title">Favor Quantity Guide</h3>
       <table>
-        <thead><tr><th>Size</th><th>Bust (in)</th><th>Waist (in)</th><th>Hips (in)</th></tr></thead>
+        <thead><tr><th>Guest Count</th><th>Recommended Favors</th><th>Lead Time</th></tr></thead>
         <tbody>
-          <tr><td>XS</td><td>32</td><td>24</td><td>34</td></tr>
-          <tr><td>S</td><td>34</td><td>26</td><td>36</td></tr>
-          <tr><td>M</td><td>36</td><td>28</td><td>38</td></tr>
-          <tr><td>L</td><td>38.5</td><td>30.5</td><td>40.5</td></tr>
-          <tr><td>XL</td><td>41.5</td><td>33.5</td><td>43.5</td></tr>
-        </tbody>
-      </table>${measureNote}
-    `,
-    footwear: `
-      <span class="eyebrow">Fit Assurance</span>
-      <h3 id="modal-title">Footwear — Size Guide</h3>
-      <table>
-        <thead><tr><th>US</th><th>EU</th><th>UK</th></tr></thead>
-        <tbody>
-          <tr><td>6</td><td>36</td><td>4</td></tr>
-          <tr><td>7</td><td>37–38</td><td>5</td></tr>
-          <tr><td>8</td><td>39</td><td>6</td></tr>
-          <tr><td>9</td><td>40</td><td>7</td></tr>
-          <tr><td>10</td><td>41–42</td><td>8</td></tr>
+          <tr><td>50 Guests</td><td>55 Favors (+10% buffer)</td><td>3–5 Days</td></tr>
+          <tr><td>100 Guests</td><td>110 Favors (+10% buffer)</td><td>5–7 Days</td></tr>
+          <tr><td>250 Guests</td><td>275 Favors (+10% buffer)</td><td>7–10 Days</td></tr>
         </tbody>
       </table>${measureNote}
     `
@@ -234,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalOverlay || !modalBody) return;
 
     lastFocused = document.activeElement;
-    modalBody.innerHTML = sizeTables[type] || sizeTables.tops;
+    modalBody.innerHTML = sizeTables[type] || sizeTables.candles;
     modalOverlay.classList.add('open');
     if (modalClose) modalClose.focus();
     document.body.style.overflow = 'hidden';

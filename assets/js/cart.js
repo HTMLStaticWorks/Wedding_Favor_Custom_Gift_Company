@@ -6,13 +6,11 @@
    ========================================================================== */
 (function () {
 
-  const STORAGE_KEY = 'aura:bag:v1';
-  const SEEDED_KEY = 'aura:bag:seeded';
+  const STORAGE_KEY = 'aura:favors_bag:v3';
+  const SEEDED_KEY = 'aura:favors_bag:seeded_v3';
   const FREE_SHIPPING = 200;
-  const SIZES = ['XS', 'S', 'M', 'L', 'XL'];
 
-  /* The bag a first-time visitor lands on — the client asked for a checkout
-     that demos with real line items, so we prefill once and never again. */
+  /* The bag a first-time visitor lands on — seeded with wedding favors & custom gifts */
   const SAMPLE_BAG = [
     {
       id: 'rose-soy-candle',
@@ -20,7 +18,7 @@
       category: 'Candle Favors',
       price: 4.50,
       compareAt: 6.00,
-      image: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=400&q=80',
+      image: 'https://cpimg.tistatic.com/12707443/b/4/Wedding-favours-scented-candle..webp',
       size: '4 oz',
       qty: 50
     },
@@ -30,7 +28,7 @@
       category: 'Gourmet Favors',
       price: 5.20,
       compareAt: null,
-      image: 'https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&w=400&q=80',
+      image: 'https://m.media-amazon.com/images/I/612e31WuykL.jpg',
       size: '2 oz',
       qty: 50
     },
@@ -40,7 +38,7 @@
       category: 'Keepsakes',
       price: 7.80,
       compareAt: null,
-      image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=80',
+      image: 'https://i.etsystatic.com/55603008/r/il/8f911f/8371881696/il_300x300.8371881696_ok0w.jpg',
       size: 'Pair',
       qty: 25
     }
@@ -53,16 +51,34 @@
 
   const read = () => {
     try {
+      // Purge old legacy keys from previous clothing demo iterations
+      localStorage.removeItem('aura:bag:v1');
+      localStorage.removeItem('aura:bag:seeded');
+      localStorage.removeItem('aura:favors_bag:v1');
+
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw !== null) return JSON.parse(raw) || [];
-      // First visit in this browser — seed the demo bag once.
-      if (!localStorage.getItem(SEEDED_KEY)) {
-        localStorage.setItem(SEEDED_KEY, '1');
-        return SAMPLE_BAG.map(item => Object.assign({}, item));
+      if (raw !== null) {
+        const parsed = JSON.parse(raw) || [];
+        // Filter out any legacy clothing items
+        const validFavors = parsed.filter(item =>
+          !/blazer|dress|sweater|coat|pants|skirt|shirt/i.test(item.title || '')
+        );
+        if (validFavors.length > 0) {
+          // Always sync image URLs from SAMPLE_BAG so any image edits in cart.js reflect immediately
+          validFavors.forEach(item => {
+            const sample = SAMPLE_BAG.find(s => s.id === item.id);
+            if (sample && sample.image) {
+              item.image = sample.image;
+            }
+          });
+          return validFavors;
+        }
       }
-      return [];
+      // Seed with favor items
+      localStorage.setItem(SEEDED_KEY, '1');
+      return SAMPLE_BAG.map(item => Object.assign({}, item));
     } catch (err) {
-      return [];
+      return SAMPLE_BAG.map(item => Object.assign({}, item));
     }
   };
 
@@ -161,15 +177,15 @@
       <div class="cart-empty" hidden>
         <i class="ph ph-handbag-simple"></i>
         <h4>Your bag is empty</h4>
-        <p>Nothing chosen yet — the new season is waiting.</p>
-        <a href="shop.html" class="btn btn-outline btn-sm">Browse the Collection</a>
+        <p>Nothing chosen yet — explore our custom wedding favor collection.</p>
+        <a href="shop.html" class="btn btn-outline btn-sm">Browse Favor Catalog</a>
       </div>
 
       <footer class="cart-foot">
         <div class="cart-line saved" hidden><span>You save</span><span class="cart-saved-val"></span></div>
         <div class="cart-line"><span>Shipping</span><span class="cart-ship-val">Calculated at checkout</span></div>
         <div class="cart-line total"><span>Subtotal</span><strong class="cart-subtotal">$0</strong></div>
-        <p class="cart-note">Taxes calculated at checkout · Complimentary alterations</p>
+        <p class="cart-note">Taxes calculated at checkout · Complimentary digital proofing &amp; custom ribbons</p>
         <a href="checkout.html" class="btn btn-primary btn-full cart-checkout">Proceed to Checkout</a>
         <button class="cart-continue" type="button">Continue shopping</button>
       </footer>
@@ -239,9 +255,6 @@
      ------------------------------------------------------------------------ */
   const lineHTML = (item) => {
     const key = lineKey(item);
-    const options = SIZES.map(s =>
-      `<option value="${s}"${s === item.size ? ' selected' : ''}>${s}</option>`
-    ).join('');
     const price = item.compareAt
       ? `<span class="price-original">${money(item.compareAt)}</span> <span class="price-sale">${money(item.price)}</span>`
       : money(item.price);
@@ -256,9 +269,9 @@
           <h4>${item.title}</h4>
           <div class="price">${price}</div>
           <div class="cart-item-foot">
-            <label class="cart-size">Size
-              <select aria-label="Size for ${item.title}">${options}</select>
-            </label>
+            <span class="cart-size" style="font-size:0.825rem; color:var(--text-muted)">
+              Option: ${item.size || 'Standard'}
+            </span>
             <div class="qty">
               <button type="button" data-act="dec" aria-label="Decrease quantity">&minus;</button>
               <span>${item.qty}</span>
@@ -281,7 +294,7 @@
 
     drawer.querySelector('.cart-title').textContent = empty
       ? 'The Bag'
-      : count() + (count() === 1 ? ' Piece' : ' Pieces');
+      : count() + (count() === 1 ? ' Item' : ' Items');
 
     itemsEl.innerHTML = items.map(lineHTML).join('');
     itemsEl.hidden = empty;

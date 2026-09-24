@@ -30,10 +30,10 @@
     <nav class="drawer-links">
       <a href="index.html">Home</a>
       <a href="home2.html">Home2</a>
+      <a href="about.html">About</a>
       <a href="shop.html">Products</a>
       <a href="branding.html">Branding</a>
       <a href="bulk.html" class="active">Bulk</a>
-      <a href="about.html">About</a>
       <a href="blog.html">Stories</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -54,17 +54,17 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="home2.html">Home2</a>
+        <a href="about.html">About</a>
         <a href="shop.html">Products</a>
         <a href="branding.html">Branding</a>
         <a href="bulk.html" class="active">Bulk</a>
-        <a href="about.html">About</a>
         <a href="blog.html">Stories</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav-actions">
         <button class="rtl-toggle" aria-label="Toggle text direction"></button>
-        <a href="enquire.html" class="btn btn-sm btn-outline desk-only">Enquire</a>
         <button class="theme-toggle" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
+        <a href="enquire.html" class="btn btn-sm btn-outline desk-only">Enquire</a>
         <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
       </div>
     </div>
@@ -73,18 +73,10 @@
   <main>
 
     <!-- Page Header -->
-    <header class="page-header light-text">
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <span class="eyebrow centered" data-reveal>Wholesale Gifting</span>
-        <h1 data-reveal style="--reveal-delay:1">Bulk Orders &amp; Tiered Pricing</h1>
-        <p class="subtext" data-reveal style="--reveal-delay:2">Whether planning an intimate gathering or a gala wedding of 500+ guests, take advantage of our tiered volume discounts and priority studio production.</p>
-      </div>
-      <div class="hero-media">
-        <picture>
-          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=2000&q=80" alt="Bulk wedding gift hampers ready for shipping" fetchpriority="high">
-        </picture>
-      </div>
+    <header class="page-header container">
+      <span class="eyebrow centered" data-reveal>Wholesale Gifting</span>
+      <h1 data-reveal style="--reveal-delay:1">Bulk Orders &amp; Tiered Pricing</h1>
+      <p class="subtext" data-reveal style="--reveal-delay:2">Whether planning an intimate gathering or a gala wedding of 500+ guests, take advantage of our tiered volume discounts and priority studio production.</p>
     </header>
 
     <!-- Pricing Tiers -->
@@ -95,41 +87,41 @@
         <p class="subtext" data-reveal style="--reveal-delay:2">Discounts apply automatically at checkout or via custom invoice.</p>
       </div>
 
-      <div class="grid grid-4" style="margin-top: var(--space-6);">
+      <div class="grid grid-4" id="bulk-tiers-grid" style="margin-top: var(--space-6);">
 
-        <article class="card" data-reveal>
-          <div class="card-inner" style="padding: var(--space-6); text-align: center;">
-            <span class="eyebrow centered" style="margin-bottom: var(--space-2);">Tier 1</span>
-            <h3 style="font-size: 1.8rem; color: var(--color-accent); margin: var(--space-2) 0;">25 &ndash; 50 Pcs</h3>
-            <p class="subtext" style="font-size: var(--text-small); margin-bottom: var(--space-4);">Standard Studio Pricing &middot; Free Monogram Tag</p>
-            <div style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary);">5% Off Total</div>
+        <article class="card tier-card" data-reveal>
+          <div class="card-inner">
+            <span class="eyebrow centered">Tier 1</span>
+            <h3 class="tier-pcs">25 &ndash; 50 Pcs</h3>
+            <p class="subtext tier-desc">Standard Studio Pricing &middot; Free Monogram Tag</p>
+            <div class="tier-discount">5% Off Total</div>
           </div>
         </article>
 
-        <article class="card" data-reveal style="--reveal-delay:1">
-          <div class="card-inner" style="padding: var(--space-6); text-align: center; border: 2px solid var(--color-accent);">
-            <span class="eyebrow centered" style="margin-bottom: var(--space-2);">Popular</span>
-            <h3 style="font-size: 1.8rem; color: var(--color-accent); margin: var(--space-2) 0;">51 &ndash; 150 Pcs</h3>
-            <p class="subtext" style="font-size: var(--text-small); margin-bottom: var(--space-4);">10% Off &middot; Free Hand-Pressed Wax Seals</p>
-            <div style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary);">10% Off Total</div>
+        <article class="card tier-card popular" data-reveal style="--reveal-delay:1">
+          <div class="card-inner">
+            <span class="badge-popular">Most Popular</span>
+            <h3 class="tier-pcs">51 &ndash; 150 Pcs</h3>
+            <p class="subtext tier-desc">10% Off &middot; Free Hand-Pressed Wax Seals</p>
+            <div class="tier-discount">10% Off Total</div>
           </div>
         </article>
 
-        <article class="card" data-reveal style="--reveal-delay:2">
-          <div class="card-inner" style="padding: var(--space-6); text-align: center;">
-            <span class="eyebrow centered" style="margin-bottom: var(--space-2);">Tier 3</span>
-            <h3 style="font-size: 1.8rem; color: var(--color-accent); margin: var(--space-2) 0;">151 &ndash; 300 Pcs</h3>
-            <p class="subtext" style="font-size: var(--text-small); margin-bottom: var(--space-4);">15% Off &middot; Complimentary Sample Kit Included</p>
-            <div style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary);">15% Off Total</div>
+        <article class="card tier-card" data-reveal style="--reveal-delay:2">
+          <div class="card-inner">
+            <span class="eyebrow centered">Tier 3</span>
+            <h3 class="tier-pcs">151 &ndash; 300 Pcs</h3>
+            <p class="subtext tier-desc">15% Off &middot; Complimentary Sample Kit Included</p>
+            <div class="tier-discount">15% Off Total</div>
           </div>
         </article>
 
-        <article class="card" data-reveal style="--reveal-delay:3">
-          <div class="card-inner" style="padding: var(--space-6); text-align: center;">
-            <span class="eyebrow centered" style="margin-bottom: var(--space-2);">VIP Premier</span>
-            <h3 style="font-size: 1.8rem; color: var(--color-accent); margin: var(--space-2) 0;">300+ Pcs</h3>
-            <p class="subtext" style="font-size: var(--text-small); margin-bottom: var(--space-4);">20% Off &middot; Free Dedicated Concierge &amp; Express Freight</p>
-            <div style="font-size: 1.25rem; font-weight: 600; color: var(--color-primary);">20% Off Total</div>
+        <article class="card tier-card" data-reveal style="--reveal-delay:3">
+          <div class="card-inner">
+            <span class="eyebrow centered">VIP Premier</span>
+            <h3 class="tier-pcs">300+ Pcs</h3>
+            <p class="subtext tier-desc">20% Off &middot; Free Dedicated Concierge &amp; Express Freight</p>
+            <div class="tier-discount">20% Off Total</div>
           </div>
         </article>
 
@@ -137,33 +129,31 @@
     </section>
 
     <!-- Features Band -->
-    <section class="band-dark" style="margin-top: var(--space-8);">
-      <div class="container">
-        <div class="section-header centered">
-          <span class="eyebrow centered" data-reveal>Why Partner With Us</span>
-          <h2 data-reveal style="--reveal-delay:1">Wholesale Advantages</h2>
+    <section class="container" style="margin-top: var(--space-8); padding-top: var(--space-4); padding-bottom: var(--space-4);">
+      <div class="section-header centered">
+        <span class="eyebrow centered" data-reveal>Why Partner With Us</span>
+        <h2 data-reveal style="--reveal-delay:1">Wholesale Advantages</h2>
+      </div>
+      <div class="feature-row" data-reveal="fade" style="margin-top: var(--space-6);">
+        <div class="feature-item">
+          <i class="ph ph-truck"></i>
+          <h4>Climate-Safe Freight</h4>
+          <p>Temperature-managed shipping for candles &amp; honey</p>
         </div>
-        <div class="feature-row" data-reveal="fade" style="margin-top: var(--space-6);">
-          <div class="feature-item">
-            <i class="ph ph-truck"></i>
-            <h4>Climate-Safe Freight</h4>
-            <p>Temperature-managed shipping for candles &amp; honey</p>
-          </div>
-          <div class="feature-item">
-            <i class="ph ph-clock"></i>
-            <h4>Fast Turnaround</h4>
-            <p>Standard lead time 10-14 days for bulk orders</p>
-          </div>
-          <div class="feature-item">
-            <i class="ph ph-user-gear"></i>
-            <h4>Dedicated Coordinator</h4>
-            <p>Direct contact with our studio production lead</p>
-          </div>
-          <div class="feature-item">
-            <i class="ph ph-gift"></i>
-            <h4>Free Sample Credit</h4>
-            <p>Sample kit cost refunded on bulk order placement</p>
-          </div>
+        <div class="feature-item">
+          <i class="ph ph-clock"></i>
+          <h4>Fast Turnaround</h4>
+          <p>Standard lead time 10-14 days for bulk orders</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-user-gear"></i>
+          <h4>Dedicated Coordinator</h4>
+          <p>Direct contact with our studio production lead</p>
+        </div>
+        <div class="feature-item">
+          <i class="ph ph-gift"></i>
+          <h4>Free Sample Credit</h4>
+          <p>Sample kit cost refunded on bulk order placement</p>
         </div>
       </div>
     </section>
@@ -176,47 +166,51 @@
         <p class="subtext" data-reveal style="--reveal-delay:2">Receive a personalized price estimate within 12 business hours.</p>
       </div>
 
-      <div class="card" style="padding: var(--space-6); max-width: 680px; margin: 0 auto;" data-reveal>
-        <form action="#" method="POST" style="display: grid; gap: var(--space-4);">
-          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
-            <div>
-              <label for="bulk-name" style="font-weight: 500; font-size: var(--text-small); display: block; margin-bottom: 4px;">Contact Name *</label>
-              <input type="text" id="bulk-name" required placeholder="Full name" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-primary);">
-            </div>
-            <div>
-              <label for="bulk-email" style="font-weight: 500; font-size: var(--text-small); display: block; margin-bottom: 4px;">Email Address *</label>
-              <input type="email" id="bulk-email" required placeholder="email@example.com" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-primary);">
-            </div>
+      <div class="form-panel card form-card-responsive" style="padding: var(--space-8) var(--space-6); max-width: 640px; margin: 0 auto; background: var(--color-secondary); border: 1px solid var(--color-hairline); box-shadow: var(--shadow-main);" data-reveal>
+        <form data-validate="true" action="#" method="POST" novalidate>
+          <div class="form-group">
+            <label for="bulk-name">Contact Name *</label>
+            <input type="text" id="bulk-name" name="name" class="form-control" required placeholder="Your full name">
+            <span class="error-msg">Contact name is required</span>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
-            <div>
-              <label for="bulk-qty" style="font-weight: 500; font-size: var(--text-small); display: block; margin-bottom: 4px;">Expected Quantity *</label>
-              <select id="bulk-qty" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-primary);">
-                <option>25 – 50 Pcs</option>
-                <option>51 – 150 Pcs</option>
-                <option>151 – 300 Pcs</option>
-                <option>300+ Pcs</option>
-              </select>
-            </div>
-            <div>
-              <label for="bulk-type" style="font-weight: 500; font-size: var(--text-small); display: block; margin-bottom: 4px;">Favor Category Interest</label>
-              <select id="bulk-type" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-primary);">
-                <option>Candle Favors</option>
-                <option>Bath &amp; Body Salts</option>
-                <option>Edible Honey Jars</option>
-                <option>Gift Hampers</option>
-                <option>Mixed Custom Assortment</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label for="bulk-email">Email Address *</label>
+            <input type="email" id="bulk-email" name="email" class="form-control" required placeholder="email@example.com">
+            <span class="error-msg">Valid email is required</span>
           </div>
 
-          <div>
-            <label for="bulk-message" style="font-weight: 500; font-size: var(--text-small); display: block; margin-bottom: 4px;">Additional Details / Special Requirements</label>
-            <textarea id="bulk-message" rows="4" placeholder="Tell us about your event theme, shipping location, or custom packaging preferences..." style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-primary);"></textarea>
+          <div class="form-group">
+            <label for="bulk-qty">Expected Quantity *</label>
+            <select id="bulk-qty" name="quantity" class="form-control" required style="cursor: pointer;">
+              <option value="" disabled selected>Select expected quantity</option>
+              <option value="tier1">25 – 50 Pcs</option>
+              <option value="tier2">51 – 150 Pcs</option>
+              <option value="tier3">151 – 300 Pcs</option>
+              <option value="tier4">300+ Pcs</option>
+            </select>
+            <span class="error-msg">Please select a quantity</span>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit Wholesale Request <i class="ph ph-arrow-right"></i></button>
+          <div class="form-group">
+            <label for="bulk-type">Favor Category Interest *</label>
+            <select id="bulk-type" name="category" class="form-control" required style="cursor: pointer;">
+              <option value="" disabled selected>Select favor category</option>
+              <option value="candles">Candle Favors</option>
+              <option value="salts">Bath &amp; Body Salts</option>
+              <option value="edible">Edible Honey Jars</option>
+              <option value="hampers">Gift Hampers</option>
+              <option value="mixed">Mixed Custom Assortment</option>
+            </select>
+            <span class="error-msg">Please select a category</span>
+          </div>
+
+          <div class="form-group">
+            <label for="bulk-message">Additional Details / Special Requirements</label>
+            <textarea id="bulk-message" name="message" class="form-control" rows="4" placeholder="Tell us about your event theme, shipping location, or custom packaging preferences..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Submit Wholesale Request <i class="ph ph-arrow-right"></i></button>
         </form>
       </div>
     </section>

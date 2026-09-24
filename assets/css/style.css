@@ -30,9 +30,9 @@
   --font-body: 'Jost', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: var(--font-display); /* legacy alias */
 
-  --text-display: clamp(3rem, 7.2vw, 6.75rem);
-  --text-h1: clamp(2.75rem, 6.2vw, 5.75rem);
-  --text-h2: clamp(2rem, 4.2vw, 3.5rem);
+  --text-display: clamp(2.5rem, 4.2vw, 4.25rem);
+  --text-h1: clamp(2.125rem, 3.4vw, 3.25rem);
+  --text-h2: clamp(1.65rem, 2.4vw, 2.35rem);
   --text-h3: clamp(1.5rem, 2.4vw, 2.125rem);
   --text-h4: clamp(1.125rem, 1.4vw, 1.375rem);
   --text-lead: clamp(1.0625rem, 1.25vw, 1.25rem);
@@ -860,10 +860,12 @@ body.has-announcement .hero:first-of-type { padding-top: calc(var(--nav-h) + var
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  padding-top: calc(var(--nav-h) + var(--space-10));
-  padding-bottom: var(--space-12);
+  padding-top: calc(var(--nav-h) + var(--space-8));
+  padding-bottom: var(--space-8);
   text-align: center;
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-8);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-hairline);
 }
 .page-header .container {
   position: relative;
@@ -1416,8 +1418,101 @@ body.has-announcement .page-header {
 .band-dark .btn-outline:hover { color: #1C2D3D; border-color: var(--band-ink); }
 [data-theme="dark"] .band-dark .btn-outline:hover { color: #0F172A; }
 .band-dark .stat-line { border-top-color: color-mix(in srgb, var(--band-ink) 20%, transparent); }
+
+/* Light theme surface section */
+.section-light-surface {
+  background-color: var(--color-accent-wash);
+  color: var(--color-primary);
+  border-top: 1px solid var(--color-hairline);
+  border-bottom: 1px solid var(--color-hairline);
+}
+[data-theme="dark"] .section-light-surface {
+  background-color: #0F172A;
+  color: #F8FAFC;
+}
+
+.section-light-surface h2,
+.section-light-surface h3,
+.section-light-surface h4 {
+  color: var(--color-primary);
+}
+[data-theme="dark"] .section-light-surface h2,
+[data-theme="dark"] .section-light-surface h3,
+[data-theme="dark"] .section-light-surface h4 {
+  color: #F8FAFC;
+}
+
+.section-light-surface .subtext {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .section-light-surface .subtext {
+  color: #94A3B8;
+}
+
+.section-light-surface .eyebrow {
+  color: var(--color-accent);
+}
+
+.section-light-surface .quote-card {
+  border-color: var(--color-border);
+  background: var(--color-secondary);
+  box-shadow: var(--shadow-sm);
+}
+[data-theme="dark"] .section-light-surface .quote-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.section-light-surface .quote-card:hover {
+  border-color: var(--color-accent);
+  background: #ffffff;
+  box-shadow: var(--shadow-lift);
+}
+[data-theme="dark"] .section-light-surface .quote-card:hover {
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.section-light-surface .quote-card p,
+.section-light-surface .quote-card .principle-copy {
+  color: var(--color-text-muted);
+}
+[data-theme="dark"] .section-light-surface .quote-card p,
+[data-theme="dark"] .section-light-surface .quote-card .principle-copy {
+  color: #CBD5E1;
+}
+
+.section-light-surface .quote-mark {
+  color: var(--color-accent);
+  opacity: 0.9;
+}
+
+.section-light-surface .btn-outline {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+[data-theme="dark"] .section-light-surface .btn-outline {
+  color: #F8FAFC;
+  border-color: #F8FAFC;
+}
+
+.section-light-surface .btn-outline:hover {
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+[data-theme="dark"] .section-light-surface .btn-outline:hover {
+  color: #0F172A;
+  background-color: #F8FAFC;
+  border-color: #F8FAFC;
+}
 .band-dark .stat-line strong { color: var(--band-ink); }
 .band-dark .stat-line span { color: color-mix(in srgb, var(--band-ink) 65%, transparent); }
+.band-dark .feature-item p { color: color-mix(in srgb, var(--band-ink) 85%, transparent) !important; }
+.band-dark .feature-item h4 { color: var(--band-ink) !important; }
+.band-dark .feature-item i { color: var(--band-accent) !important; }
+.band-dark .feature-item:hover { background: color-mix(in srgb, var(--band-ink) 8%, transparent); }
+
 
 /* ==========================================================================
    Testimonials
@@ -3610,11 +3705,15 @@ select.form-control option { background: var(--color-secondary); color: var(--co
 /* Custom mobile & tablet adjustments */
 @media (max-width: 368px) {
   .hero {
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
   }
   .hero-media {
-    margin-top: 0 !important;
-    margin-bottom: var(--space-4) !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 240px !important;
+    margin-top: var(--space-4) !important;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -3709,6 +3808,23 @@ select.form-control option { background: var(--color-secondary); color: var(--co
   }
 }
 
+@media (max-width: 1440px) {
+  .nav-links {
+    gap: clamp(10px, 1.4vw, 22px) !important;
+  }
+  .nav-links a {
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.08em !important;
+  }
+  .nav-actions {
+    gap: 10px !important;
+  }
+  .navbar .container {
+    padding-left: var(--space-4) !important;
+    padding-right: var(--space-4) !important;
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav-links {
     gap: clamp(6px, 1vw, 14px) !important;
@@ -3722,5 +3838,166 @@ select.form-control option { background: var(--color-secondary); color: var(--co
     padding-right: var(--space-3) !important;
   }
 }
+
+/* Bulk tiers & Form alignment on 368px mobile viewports */
+@media (max-width: 480px) {
+  #bulk-tiers-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+  .form-card-responsive {
+    padding: var(--space-4) !important;
+  }
+  .form-row-responsive {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-3) !important;
+  }
+}
+
+/* Wholesale Discount Tiers styling */
+.tier-card {
+  position: relative;
+  background: var(--color-secondary);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-main);
+  transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background-color 0.4s var(--ease-out);
+  cursor: pointer;
+  height: 100%;
+}
+.tier-card .card-inner {
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.tier-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lift);
+}
+.tier-pcs {
+  font-size: 1.75rem;
+  font-family: var(--font-display);
+  color: var(--color-accent);
+  margin: var(--space-2) 0;
+  font-weight: 600;
+}
+.tier-desc {
+  font-size: var(--text-small);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+}
+.tier-discount {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: auto;
+}
+
+/* Popular tier card distinct highlight */
+.tier-card.popular {
+  border: 2px solid var(--color-accent);
+  background: var(--color-accent-wash);
+  box-shadow: 0 4px 20px rgba(184, 107, 119, 0.14);
+}
+.tier-card.popular:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-accent);
+  box-shadow: 0 16px 36px -8px rgba(184, 107, 119, 0.28);
+}
+.badge-popular {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  margin-bottom: var(--space-2);
+}
+
+/* Responsive grid layout for 'New Arrivals' 3-card section on Products Page */
+#new .rail {
+  display: grid !important;
+  overflow: visible !important;
+  scroll-snap-type: none !important;
+  gap: var(--space-6) !important;
+}
+
+@media (min-width: 769px) {
+  #new .rail {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #new .rail {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  #new .rail > *:nth-child(3) {
+    grid-column: span 2 !important;
+    justify-self: center !important;
+    width: 100% !important;
+    max-width: calc(50% - (var(--space-4) / 2)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #new .rail {
+    grid-template-columns: 1fr !important;
+  }
+  #new .rail > *:nth-child(3) {
+    grid-column: span 1 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Mobile 368px spacing for Branding Page hero header and step indicators */
+@media (max-width: 480px) {
+  .checkout-page .page-header {
+    margin-bottom: var(--space-6) !important;
+    padding-bottom: var(--space-2) !important;
+  }
+  .checkout-steps {
+    margin-top: var(--space-5) !important;
+    margin-bottom: var(--space-6) !important;
+    padding-top: var(--space-2) !important;
+  }
+  .checkout-grid {
+    margin-top: var(--space-4) !important;
+  }
+}
+
+/* Desktop 1440px+ refined hero heading font sizes for all pages */
+@media (min-width: 1440px) {
+  .hero h1,
+  .hero-split h1,
+  .page-header h1,
+  h1.hero-title,
+  .hero-body h1 {
+    font-size: clamp(2.25rem, 3.2vw, 3.5rem) !important;
+    line-height: 1.08 !important;
+  }
+  .page-header h1 {
+    font-size: clamp(2rem, 2.8vw, 3rem) !important;
+    line-height: 1.1 !important;
+  }
+  .display,
+  .hero .display,
+  h1.display {
+    font-size: clamp(2.5rem, 3.8vw, 4rem) !important;
+    line-height: 1.04 !important;
+  }
+}
+
+
+
 
 
