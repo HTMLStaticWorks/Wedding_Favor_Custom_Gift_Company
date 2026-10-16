@@ -243,14 +243,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     Wishlist (front-end demo state)
+     Wishlist (front-end interactive state)
      Add-to-bag lives in cart.js, which owns the bag and its badge.
      ========================================================================== */
   document.querySelectorAll('.wishlist').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const active = btn.classList.toggle('active');
-      btn.setAttribute('aria-pressed', active);
+      btn.setAttribute('aria-pressed', String(active));
       toast(active ? 'Saved to your wishlist' : 'Removed from your wishlist', active ? 'ph-heart' : 'ph-heart-break');
     });
   });

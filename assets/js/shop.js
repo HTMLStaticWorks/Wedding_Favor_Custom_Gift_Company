@@ -6,19 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   // Scoped to the main grid — the New Arrivals rail carries product cards too
   // and must never be hidden by a filter.
-  const productCards = document.querySelectorAll('#product-list .product-card');
+  const productCards = document.querySelectorAll('#collection-grid .product-card, #product-list .product-card');
   const emptyState = document.querySelector('.empty-state');
 
-  const applyFilter = (filterGender, filterOccasion) => {
+  const scrollToCollection = () => {
+    const col = document.getElementById('collection');
+    if (col) {
+      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 74;
+      const top = col.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  };
+
+  const applyFilter = (filterGender, filterOccasion, filterCat) => {
     let visible = 0;
 
     productCards.forEach(card => {
       const cardGender = card.getAttribute('data-gender');
       const cardOccasion = card.getAttribute('data-occasion');
+      const cardCat = card.getAttribute('data-category');
 
       let show = true;
-      if (filterGender && filterGender !== 'all' && cardGender !== filterGender) show = false;
-      if (filterOccasion && filterOccasion !== 'all' && cardOccasion !== filterOccasion) show = false;
+      const target = filterCat || filterGender || filterOccasion || 'all';
+
+      if (target !== 'all') {
+        const matches = (cardCat && cardCat === target) ||
+                        (cardGender && cardGender === target) ||
+                        (cardOccasion && cardOccasion === target);
+        if (!matches) show = false;
+      }
 
       card.style.display = show ? 'flex' : 'none';
       if (show) visible += 1;
@@ -40,25 +56,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
         markActive(btn);
-        applyFilter(btn.getAttribute('data-gender'), btn.getAttribute('data-occasion'));
+        const cat = btn.getAttribute('data-category') || btn.getAttribute('data-gender') || 'all';
+        applyFilter(btn.getAttribute('data-gender'), btn.getAttribute('data-occasion'), cat);
+        scrollToCollection();
       });
     });
 
-    // Honour ?gender= and ?occasion= links coming from the homepage tiles and footer
+    // Honour ?category=, ?gender=, ?occasion=, ?theme= and URL hash links
     const params = new URLSearchParams(window.location.search);
-    const gender = params.get('gender');
-    const occasion = params.get('occasion');
+    const categoryParam = params.get('category') || params.get('theme') || params.get('gender') || params.get('occasion');
+    const hash = window.location.hash ? window.location.hash.replace('#', '') : null;
+    const targetKey = (categoryParam || hash || '').toLowerCase();
 
-    if (gender || occasion) {
-      const g = gender || 'all';
-      const o = occasion || 'all';
-      const match = Array.from(filterBtns).find(b =>
-        b.getAttribute('data-gender') === g && b.getAttribute('data-occasion') === o
-      );
-      markActive(match || null);
-      applyFilter(g, o);
+    if (targetKey) {
+      let matchedBtn = null;
+      filterBtns.forEach(b => {
+        const c = (b.getAttribute('data-category') || b.getAttribute('data-gender') || '').toLowerCase();
+        if (c && (c === targetKey || (targetKey === 'classic' && c === 'candles') || (targetKey === 'rustic' && c === 'edible') || (targetKey === 'luxe' && c === 'hampers'))) {
+          matchedBtn = b;
+        }
+      });
+
+      if (matchedBtn) {
+        markActive(matchedBtn);
+        const cat = matchedBtn.getAttribute('data-category') || matchedBtn.getAttribute('data-gender') || 'all';
+        applyFilter(matchedBtn.getAttribute('data-gender'), matchedBtn.getAttribute('data-occasion'), cat);
+        setTimeout(scrollToCollection, 250);
+      }
     }
   }
 

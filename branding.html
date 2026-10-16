@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aura Favors | Custom Branding &amp; Monogram Studio</title>
-  <meta name="description" content="Configure custom branding, hand-pressed wax seals, and personalized monograms for your wedding favors and gift hampers.">
+  <meta name="description"
+    content="Configure custom branding, hand-pressed wax seals, and personalized monograms for your wedding favors and gift hampers.">
   <meta name="theme-color" content="#2C1E21">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 
@@ -15,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
 
   <div class="drawer-overlay"></div>
@@ -40,7 +43,8 @@
         <button class="theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
         <span class="drawer-meta">Appearance &amp; Direction</span>
       </div>
-      <a href="enquire.html" class="btn btn-primary btn-full" style="margin-top: var(--space-3); justify-content: center;">Enquire</a>
+      <a href="enquire.html" class="btn btn-primary btn-full"
+        style="margin-top: var(--space-3); justify-content: center;">Enquire</a>
       <p class="drawer-meta">Studio Care — +1 800 555 0199</p>
     </div>
   </aside>
@@ -61,7 +65,7 @@
       <div class="nav-actions">
         <button class="rtl-toggle" aria-label="Toggle text direction"></button>
         <button class="theme-toggle" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
-        <a href="enquire.html" class="btn btn-sm btn-outline desk-only">Enquire</a>
+        <a href="enquire.html" class="btn btn-sm btn-primary desk-only">Enquire</a>
         <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
       </div>
     </div>
@@ -74,256 +78,342 @@
       <span class="eyebrow centered" data-reveal>Personalization Studio</span>
       <h1 data-reveal style="--reveal-delay:1">Custom Branding &amp; Monograms</h1>
       <p class="subtext" data-reveal style="--reveal-delay:2">
-        Select your custom wax seal colors, monogram typography, and packaging ribbon options to configure your personalized wedding favor suite.
+        Select your custom wax seal colors, monogram typography, and packaging ribbon options to configure your
+        personalized wedding favor suite.
       </p>
     </header>
 
-    <section class="container tight" style="padding-top:0">
+    <!-- ==========================================================================
+         The Branding Atelier Showcase Section
+         Covers: Branding Services, Creative Concepts, Brand Identity, Packaging, Portfolio
+         ========================================================================== -->
+    <section class="branding-showcase-section container" id="branding-showcase">
 
-      <ol class="checkout-steps" data-reveal="fade">
-        <li class="done"><span class="step-num"><i class="ph ph-check"></i></span><span>Selection</span></li>
-        <li class="active"><span class="step-num">2</span><span>Monogram &amp; Details</span></li>
-        <li><span class="step-num">3</span><span>Digital Proof</span></li>
-        <li><span class="step-num">4</span><span>Confirmation</span></li>
-      </ol>
+      <!-- Navigation Pills -->
+      <nav class="showcase-nav-pills" aria-label="Branding Showcase Sections">
+        <a href="#branding-services" class="pill-tab"><i class="ph ph-sparkle"></i><span>Branding Services</span></a>
+        <a href="#creative-concepts" class="pill-tab"><i class="ph ph-palette"></i><span>Creative Concepts</span></a>
+        <a href="#brand-identity" class="pill-tab"><i class="ph ph-seal-check"></i><span>Brand Identity</span></a>
+        <a href="#packaging-design" class="pill-tab"><i class="ph ph-package"></i><span>Packaging</span></a>
+        <a href="#portfolio-showcase" class="pill-tab"><i class="ph ph-camera"></i><span>Wedding Portfolio</span></a>
+      </nav>
 
-      <div class="checkout-grid">
+      <div class="showcase-block" id="creative-concepts">
+        <div class="showcase-block-header">
+          <span class="eyebrow centered">Curated Color Harmonies</span>
+          <h2>Signature Creative Concepts</h2>
+          <p class="subtext">Four harmonious artistic palettes meticulously curated for destination celebrations,
+            romantic châteaux, and black-tie galas.</p>
+        </div>
 
-        <!-- ==================== Form column ==================== -->
-        <div class="checkout-main" data-reveal="fade">
-          <form class="checkout-form" novalidate>
-
-            <div class="checkout-block">
-              <h3>Contact &amp; Event Details</h3>
-              <div class="form-group">
-                <label for="co-email">Email Address *</label>
-                <input type="email" id="co-email" name="email" class="form-control"
-                       placeholder="you@example.com" autocomplete="email" required>
-                <span class="error-msg"></span>
-              </div>
-              <div class="form-group">
-                <label for="co-phone">Phone (for proof approval updates) *</label>
-                <input type="tel" id="co-phone" name="phone" class="form-control"
-                       placeholder="+1 555 000 0000" autocomplete="tel" required>
-                <span class="error-msg"></span>
-              </div>
-              <div class="checkbox-group">
-                <input type="checkbox" id="co-news" name="newsletter" checked>
-                <label for="co-news">Send me digital proof updates and custom wax seal color swatches</label>
+        <div class="showcase-grid-4">
+          <div class="branding-concept-card" data-reveal="fade">
+            <div class="concept-media">
+              <img src="https://www.ghiggerioliveoils.com/cdn/shop/files/ghiggeris-olive-oil-wedding-favors-place-settings_mobile.jpg?v=1767031185&width=500" alt="Tuscan Sun &amp; Olive Grove Concept"
+                loading="lazy">
+            </div>
+            <div class="concept-content">
+              <h3>Tuscan Sun &amp; Olive</h3>
+              <p>Earthy terracotta hues and wild olive sprigs paired with antiqued bronze wax seals for rustic villa
+                ceremonies.</p>
+              <div class="palette-swatches">
+                <span class="palette-dot" style="background:#7A8B6E" title="Sage Olive"></span>
+                <span class="palette-dot" style="background:#C88A58" title="Terracotta Clay"></span>
+                <span class="palette-dot" style="background:#E5DCB8" title="Alabaster"></span>
+                <span class="palette-dot" style="background:#4A3528" title="Warm Espresso"></span>
               </div>
             </div>
+          </div>
 
-            <div class="checkout-block">
-              <h3>Monogram &amp; Couple Details</h3>
-              <div class="field-row">
-                <div class="form-group">
-                  <label for="co-first">Partner 1 Name *</label>
-                  <input type="text" id="co-first" name="first" class="form-control"
-                         placeholder="Sarah" required>
-                  <span class="error-msg"></span>
-                </div>
-                <div class="form-group">
-                  <label for="co-last">Partner 2 Name *</label>
-                  <input type="text" id="co-last" name="last" class="form-control"
-                         placeholder="Michael" required>
-                  <span class="error-msg"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="co-address">Monogram Initials (e.g. S &amp; M) *</label>
-                <input type="text" id="co-address" name="address" class="form-control"
-                       placeholder="S &amp; M" required>
-                <span class="error-msg"></span>
-              </div>
-              <div class="form-group">
-                <label for="co-address2">Wedding Date / Custom Date Text (optional)</label>
-                <input type="text" id="co-address2" name="address2" class="form-control"
-                       placeholder="October 14, 2026">
-              </div>
-              <div class="field-row-3">
-                <div class="form-group">
-                  <label for="co-city">City / Venue</label>
-                  <input type="text" id="co-city" name="city" class="form-control"
-                         placeholder="New York, NY" required>
-                  <span class="error-msg"></span>
-                </div>
-                <div class="form-group">
-                  <label for="co-postcode">Estimated Guest Count</label>
-                  <input type="text" id="co-postcode" name="postcode" class="form-control"
-                         placeholder="100" required>
-                  <span class="error-msg"></span>
-                </div>
-                <div class="form-group">
-                  <label for="co-country">Wax Seal Stamp Color</label>
-                  <select id="co-country" name="country" class="form-control" required>
-                    <option value="RG">Rose Gold Metallic</option>
-                    <option value="GW">Champagne Gold</option>
-                    <option value="PW">Pearl White</option>
-                    <option value="BG">Botanical Green</option>
-                    <option value="MB">Midnight Burgundy</option>
-                  </select>
-                  <span class="error-msg"></span>
-                </div>
+          <div class="branding-concept-card" data-reveal="fade">
+            <div class="concept-media">
+              <img src="https://cdn.shopify.com/s/files/1/0581/7516/0489/t/8/assets/locally-sourced-wedding-favor-personalized-wedding-1683731004691_1000x.jpg?v=1683731005" alt="French Riviera &amp; Côte d'Azur Concept"
+                loading="lazy">
+            </div>
+            <div class="concept-content">
+              <h3>French Riviera Azure</h3>
+              <p>Azure coastal blues, classic toile textures, and crisp gold-embossed seals on deckled cotton paper.</p>
+              <div class="palette-swatches">
+                <span class="palette-dot" style="background:#3D5A80" title="Riviera Navy"></span>
+                <span class="palette-dot" style="background:#98C1D9" title="Sea Mist"></span>
+                <span class="palette-dot" style="background:#E0FBFC" title="Salt White"></span>
+                <span class="palette-dot" style="background:#C5A059" title="Florentine Gold"></span>
               </div>
             </div>
+          </div>
 
-            <div class="checkout-block">
-              <h3>Branding Technique Options</h3>
-
-              <label class="option-card">
-                <input type="radio" name="delivery" value="standard" data-cost="0" data-days="5" checked>
-                <span class="option-card-body">
-                  <strong>Hand-Pressed Monogram Wax Seals</strong>
-                  <span>Hand-stamped onto favor packaging with custom couple initials.</span>
-                </span>
-                <span class="option-price">Included</span>
-              </label>
-
-              <label class="option-card">
-                <input type="radio" name="delivery" value="express" data-cost="15" data-days="2">
-                <span class="option-card-body">
-                  <strong>Gold Foil Embossed Cardstock Tags</strong>
-                  <span>Heavyweight cotton tags with metallic gold foil monogram lettering.</span>
-                </span>
-                <span class="option-price">+$15</span>
-              </label>
-
-              <label class="option-card">
-                <input type="radio" name="delivery" value="atelier" data-cost="25" data-days="7">
-                <span class="option-card-body">
-                  <strong>Complete Deluxe Suite (Wax Seal + Foil Tag + Silk Ribbon)</strong>
-                  <span>Full hand-finished presentation with silk ribbons and engraved wooden lids.</span>
-                </span>
-                <span class="option-price">+$25</span>
-              </label>
+          <div class="branding-concept-card" data-reveal="fade">
+            <div class="concept-media">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2dAPCUSpGQ1BZSY2DV2XNlZUsSHcUohksmchv48zjH0ej0ctDc4D2PsI&s=10" alt="Gilded Ballroom Black Tie Concept"
+                loading="lazy">
             </div>
-
-            <div class="checkout-block">
-              <h3>Proofing &amp; Payment Confirmation</h3>
-
-              <label class="option-card">
-                <input type="radio" name="payment" value="card" checked>
-                <span class="option-card-body"><strong>Digital Proof Approval First (Free)</strong></span>
-                <span class="pay-logos">
-                  <i class="ph ph-seal-check"></i>
-                </span>
-              </label>
-
-              <div class="form-group">
-                <label for="co-card">Credit or debit card (Proof deposit)</label>
-                <input type="text" id="co-card" name="card" class="form-control"
-                       placeholder="4242 4242 4242 4242" inputmode="numeric" autocomplete="cc-number" required>
-                <span class="error-msg"></span>
-              </div>
-              <div class="field-row">
-                <div class="form-group">
-                  <label for="co-expiry">Expiry</label>
-                  <input type="text" id="co-expiry" name="expiry" class="form-control"
-                         placeholder="MM / YY" inputmode="numeric" autocomplete="cc-exp" required>
-                  <span class="error-msg"></span>
-                </div>
-                <div class="form-group">
-                  <label for="co-cvc">Security code</label>
-                  <input type="text" id="co-cvc" name="cvc" class="form-control"
-                         placeholder="123" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required>
-                  <span class="error-msg"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="co-name">Name on card</label>
-                <input type="text" id="co-name" name="cardname" class="form-control"
-                       placeholder="Sarah &amp; Michael" autocomplete="cc-name" required>
-                <span class="error-msg"></span>
-              </div>
-
-              <div class="form-group" style="margin-top:var(--space-4)">
-                <div class="checkbox-group">
-                  <input type="checkbox" id="co-terms" name="terms" required>
-                  <label for="co-terms">I accept digital proof review policy and custom branding terms</label>
-                </div>
-                <span class="error-msg"></span>
+            <div class="concept-content">
+              <h3>Gilded Ballroom</h3>
+              <p>Deep obsidian velvet, 24k gold foil stamping, and royal cypher seals for grand black-tie evening
+                receptions.</p>
+              <div class="palette-swatches">
+                <span class="palette-dot" style="background:#1C1A1D" title="Obsidian Noir"></span>
+                <span class="palette-dot" style="background:#D4AF37" title="24k Gold"></span>
+                <span class="palette-dot" style="background:#F6F2EB" title="Silk Ivory"></span>
+                <span class="palette-dot" style="background:#6B2D5C" title="Royal Plum"></span>
               </div>
             </div>
+          </div>
 
-            <button type="submit" class="btn btn-primary btn-full place-order">Submit Branding Configuration</button>
-            <p class="cart-note" style="text-align:center">
-              <i class="ph ph-lock-simple"></i> Demonstration only — no card is charged and proof is sent to email.
+          <div class="branding-concept-card" data-reveal="fade">
+            <div class="concept-media">
+              <img src="https://i.etsystatic.com/15080020/r/il/03b3d4/7831141296/il_fullxfull.7831141296_q1h5.jpg" alt="Minimalist Botanical Modern Concept"
+                loading="lazy">
+            </div>
+            <div class="concept-content">
+              <h3>Minimalist Botanical</h3>
+              <p>Pure bone linen, eucalyptus tones, and blind-embossed typography for contemporary design celebrations.
+              </p>
+              <div class="palette-swatches">
+                <span class="palette-dot" style="background:#E8E4DF" title="Bone Linen"></span>
+                <span class="palette-dot" style="background:#8C9A86" title="Eucalyptus"></span>
+                <span class="palette-dot" style="background:#5C6B5E" title="Forest Sage"></span>
+                <span class="palette-dot" style="background:#B8977E" title="Warm Sand"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 1. BRANDING SERVICES -->
+      <div class="showcase-block" id="branding-services">
+        <div class="showcase-block-header">
+          <span class="eyebrow centered">Artisanal Craftsmanship</span>
+          <h2>Bespoke Branding Services</h2>
+          <p class="subtext">From precision metal die-cast stamps to hot foil debossing, our atelier elevates every
+            celebration favor into an enduring heirloom keepsake.</p>
+        </div>
+
+        <div class="showcase-grid-3">
+          <div class="branding-service-card" data-reveal="fade">
+            <div class="branding-service-icon"><i class="ph ph-seal-check"></i></div>
+            <h3>Custom Wax Seal Engraving</h3>
+            <p>Solid brass stamps individually laser-engraved with your monogram initials, heraldic crest, or botanical
+              vines. Each seal is hand-poured with flexible European wax that survives transit without chipping.</p>
+            <span class="branding-service-meta">28mm Brass Head · Custom Flexible Wax</span>
+          </div>
+
+          <div class="branding-service-card" data-reveal="fade">
+            <div class="branding-service-icon"><i class="ph ph-sparkle"></i></div>
+            <h3>Metallic Hot Foil Stamping</h3>
+            <p>High-precision heat-pressed foil debossing in 24k Florentine Gold, Matte Champagne, Rose Copper, or Satin
+              Silver, applied with microscopic clarity across rigid boxes and deckled cotton tags.</p>
+            <span class="branding-service-meta">Precision Hot Foil · 4 Metallic Finishes</span>
+          </div>
+
+          <div class="branding-service-card" data-reveal="fade">
+            <div class="branding-service-icon"><i class="ph ph-paint-brush"></i></div>
+            <h3>Heraldic Crest Design</h3>
+            <p>Hand-drawn intertwining letterform cyphers, floral botanicals, and bespoke family crests hand-illustrated
+              by our studio calligraphers and delivered in vector and print-ready formats.</p>
+            <span class="branding-service-meta">Vector Master Assets · Print &amp; Web</span>
+          </div>
+
+          <div class="branding-service-card" data-reveal="fade">
+            <div class="branding-service-icon"><i class="ph ph-flower-lotus"></i></div>
+            <h3>Custom Scent Profiling</h3>
+            <p>Signature olfactory formulation blending pure French lavender, golden amber, sandalwood, and neroli
+              blossom oils to capture the romantic spirit of your ceremony and venue.</p>
+            <span class="branding-service-meta">100% Essential Oils · Bespoke Blend</span>
+          </div>
+
+          <div class="branding-service-card" data-reveal="fade">
+            <div class="branding-service-icon"><i class="ph ph-paint-brush"></i></div>
+            <h3>Plant-Dyed Silk Ribbons</h3>
+            <p>100% pure mulberry silk ribbons hand-torn for soft feathered edges, infused with natural botanical
+              pigments including madder root, French lavender petals, and oak gall tannins.</p>
+            <span class="branding-service-meta">Mulberry Silk · Hand-Frayed Edges</span>
+          </div>
+
+          <div class="branding-service-card" data-reveal="fade">
+            <div class="branding-service-icon"><i class="ph ph-stamp"></i></div>
+            <h3>Blind Letterpress Debossing</h3>
+            <p>Sculptural, inkless impression pressed into 600gsm archival cotton rag paper, producing an understated,
+              aristocratic tactile texture that invites touch and contemplation.</p>
+            <span class="branding-service-meta">600gsm Cotton Rag · Tactile Relief</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. CREATIVE CONCEPTS -->
+      
+
+      <!-- 3. BRAND IDENTITY SYSTEM -->
+      <div class="showcase-block" id="brand-identity">
+        <div class="showcase-block-header">
+          <span class="eyebrow centered">Visual Legacy</span>
+          <h2>Brand Identity &amp; Monogram Heraldry</h2>
+          <p class="subtext">We architect a unified visual language linking your favors, invitations, menu programs, and
+            guest welcome suites.</p>
+        </div>
+
+        <div class="identity-split-banner" data-reveal="fade">
+          <div class="identity-split-img">
+            <img src="assets/images/branding-identity-crest.jpg" alt="Hand-pressed wax seal and engraved monogram stamp"
+              loading="lazy">
+            <span class="identity-badge-overlay"><i class="ph ph-shield-check"></i> Bespoke Seal &amp; Engraved
+              Brass</span>
+          </div>
+
+          <div class="identity-split-content">
+            <h3>Heirloom Brand Identity System</h3>
+            <p style="color:var(--color-text-muted); line-height:1.65; margin-bottom:var(--space-4)">
+              Our master artists treat your wedding branding as a couture fashion house would design a signature emblem.
+              Every crest is custom-drawn and cast into timeless solid brass.
             </p>
-          </form>
+
+            <div class="identity-feat-list">
+              <div class="identity-feat-item">
+                <div class="identity-feat-icon"><i class="ph ph-crown"></i></div>
+                <div class="identity-feat-body">
+                  <h4>Custom Monogram Heraldry</h4>
+                  <p>Hand-illustrated cyphers intertwining both partners' initials with botanical motifs, crest shields,
+                    and anniversary dates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. PACKAGING ARCHITECTURE -->
+      <div class="showcase-block" id="packaging-design">
+        <div class="showcase-block-header">
+          <span class="eyebrow centered">Tactile Unboxing</span>
+          <h2>Luxury Packaging Architecture</h2>
+          <p class="subtext">Engineered layer by layer to provide guests with an unforgettable, multi-sensory unboxing
+            ritual.</p>
         </div>
 
-        <!-- ==================== Summary column ==================== -->
-        <aside class="summary" data-reveal="fade" aria-label="Order summary">
-          <h3>Custom Favor Suite Summary <span class="summary-count"></span></h3>
+        <div class="identity-split-banner" data-reveal="fade">
+          <div class="identity-split-content">
+            <h3>Couture Packaging Anatomy</h3>
+            <p style="color:var(--color-text-muted); line-height:1.65; margin-bottom:var(--space-4)">
+              Each gift box is assembled by hand in our California atelier, ensuring seamless corners, velvet-touch
+              textures, and perfectly draped ribbons.
+            </p>
 
-          <div class="summary-items">
-            <div class="summary-item">
-              <img src="https://cpimg.tistatic.com/12707443/b/4/Wedding-favours-scented-candle..webp" alt="Hand-Poured Rose Soy Candle" loading="lazy">
-              <div>
-                <h4>Hand-Poured Rose Soy Candle</h4>
-                <span class="meta">4 oz · Qty 50</span>
+            <div class="identity-feat-list">
+              <div class="identity-feat-item">
+                <div class="identity-feat-icon"><i class="ph ph-package"></i></div>
+                <div class="identity-feat-body">
+                  <h4>Layer 01 — FSC Rigid Keepsake Box</h4>
+                  <p>1200gsm heavyweight board wrapped in Belgian bookcloth linen with hidden magnetic snap closures.
+                  </p>
+                </div>
               </div>
-              <span class="line-total">$225</span>
-            </div>
-            <div class="summary-item">
-              <img src="https://m.media-amazon.com/images/I/612e31WuykL.jpg" alt="Wildflower Honey Jar &amp; Dipper" loading="lazy">
-              <div>
-                <h4>Wildflower Honey Jar &amp; Dipper</h4>
-                <span class="meta">2 oz · Qty 50</span>
+
+              <div class="identity-feat-item">
+                <div class="identity-feat-icon"><i class="ph ph-sparkle"></i></div>
+                <div class="identity-feat-body">
+                  <h4>Layer 02 — Plant-Dyed Mulberry Silk</h4>
+                  <p>Hand-torn 100% natural silk ribbon draping the exterior with romantic, delicate feathered edges.
+                  </p>
+                </div>
               </div>
-              <span class="line-total">$260</span>
+
+              <div class="identity-feat-item">
+                <div class="identity-feat-icon"><i class="ph ph-note"></i></div>
+                <div class="identity-feat-body">
+                  <h4>Layer 03 — Deckled Letterpress Hangtag</h4>
+                  <p>Heavyweight 600gsm Italian cotton paper with feathered deckled edges and hot foil stamped
+                    typography.</p>
+                </div>
+              </div>
+
+              <div class="identity-feat-item">
+                <div class="identity-feat-icon"><i class="ph ph-seal"></i></div>
+                <div class="identity-feat-body">
+                  <h4>Layer 04 — Hand-Poured Seal Keepsake</h4>
+                  <p>Each wax seal is hand-melted and stamped by studio artisans, creating an artisanal, one-of-a-kind
+                    seal finish.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <form class="promo-form" novalidate>
-            <input type="text" class="form-control promo-input" placeholder="Promotion code"
-                   aria-label="Promotion code" autocomplete="off">
-            <button type="submit" class="btn btn-outline">Apply</button>
-          </form>
-          <p class="promo-msg"></p>
-
-          <div class="summary-totals">
-            <div class="summary-line"><span>Branding Base</span><span data-total="subtotal">$485</span></div>
-            <div class="summary-line discount" hidden><span>Discount</span><span data-total="discount">$0</span></div>
-            <div class="summary-line"><span>Digital Proof</span><span data-total="shipping">Complimentary</span></div>
-            <div class="summary-line"><span>Estimated tax</span><span data-total="tax">$38.80</span></div>
-            <div class="summary-line grand"><span>Total</span><strong data-total="grand">$523.80</strong></div>
+          <div class="identity-split-img">
+            <img src="https://m.media-amazon.com/images/I/81N+2lB-PuL.jpg"
+              alt="Luxury favor packaging suite with silk ribbon and candle" loading="lazy">
+            <span class="identity-badge-overlay"><i class="ph ph-sparkle"></i> Sensory Gift Suite Architecture</span>
           </div>
-
-          <p class="summary-trust"><i class="ph ph-shield-check"></i> Encrypted configuration &middot; 100% Digital Proof Approval</p>
-          <p class="cart-note" style="margin-bottom:0">
-            Try code <strong>FAVOR20</strong> for volume discounts, or <strong>FREESHIP</strong>.
-          </p>
-        </aside>
-
+        </div>
       </div>
+
+      <!-- 5. PORTFOLIO & REAL WEDDING CELEBRATIONS -->
+      <div class="showcase-block" id="portfolio-showcase">
+        <div class="showcase-block-header">
+          <span class="eyebrow centered">Real Celebrations</span>
+          <h2>Wedding Portfolio &amp; Case Studies</h2>
+          <p class="subtext">A curated look at recent bespoke branding suites created for memorable weddings and estate
+            celebrations worldwide.</p>
+        </div>
+
+        <div class="case-study-card" data-reveal="fade">
+          <div class="case-study-img">
+            <img src="assets/images/signature-suite-bespoke.jpg" alt="Julian &amp; Camille wedding favor suite"
+              loading="lazy">
+          </div>
+          <div class="case-study-body">
+            <span class="case-study-location"><i class="ph ph-map-pin"></i> Villa Balbiano · Lake Como, Italy</span>
+            <h3>Julian &amp; Camille — Roman Laurel &amp; Tuscan Amber Suite</h3>
+            <p>
+              For Julian &amp; Camille's lakeside villa celebration, our studio designed a custom Roman laurel monogram
+              stamped in Florentine antique gold wax. Each guest was presented with a hand-poured Tuscan Fig &amp; Amber
+              candle in an alabaster ceramic vessel, nested in a warm sage linen box with frayed olive silk ribbon.
+            </p>
+            <div class="case-study-tags">
+              <span class="case-study-tag">Bespoke Monogram</span>
+              <span class="case-study-tag">Antique Gold Wax</span>
+              <span class="case-study-tag">Lake Como Celebration</span>
+              <span class="case-study-tag">Sage Linen Box</span>
+            </div>
+            <a href="enquire.html" class="btn btn-sm btn-outline">Request Similar Suite</a>
+          </div>
+        </div>
+
+        <div class="case-study-card" data-reveal="fade">
+          <div class="case-study-img">
+            <img src="assets/images/branding-packaging-suite.jpg" alt="Elena &amp; Marc wedding favor suite"
+              loading="lazy">
+          </div>
+          <div class="case-study-body">
+            <span class="case-study-location"><i class="ph ph-map-pin"></i> Château de Tourreau · Provence,
+              France</span>
+            <h3>Elena &amp; Marc — Lavender Valley &amp; Botanical Bath Suite</h3>
+            <p>
+              Elena &amp; Marc envisioned a sensory ode to the lavender fields of Provence. We formulated a custom
+              French Lavender &amp; Sweet Honey scent, pairing a botanical glass bath salt vial with a soy votive,
+              finished with deckled calligraphy tags, rose gold hot foil stamping, and blush raw silk ribbons.
+            </p>
+            <div class="case-study-tags">
+              <span class="case-study-tag">Custom Fragrance</span>
+              <span class="case-study-tag">Provence Château</span>
+              <span class="case-study-tag">Deckled Cotton Tag</span>
+              <span class="case-study-tag">Blush Mulberry Silk</span>
+            </div>
+            <a href="enquire.html" class="btn btn-sm btn-outline">Request Similar Suite</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Above-Footer Bespoke Studio Consultation Banner -->
+      <div class="showcase-transition-banner" data-reveal="fade">
+        <div class="transition-banner-icon"><i class="ph ph-sparkle"></i></div>
+        <span class="eyebrow centered">Your Personalization Studio</span>
+        <h3>Ready to Create Your Bespoke Favor Suite?</h3>
+        <p>Connect with our atelier design team to formulate custom wax seal crests, Pantone color matching, and signature packaging tailored to your celebration.</p>
+        <div class="showcase-transition-actions">
+          <a href="enquire.html" class="btn btn-primary"><i class="ph ph-envelope-simple"></i> Request Bespoke Consultation</a>
+          <a href="shop.html" class="btn btn-outline"><i class="ph ph-gift"></i> Explore Favor Collections</a>
+        </div>
+      </div>
+
     </section>
-
-    <!-- Services -->
-    <div class="container">
-      <div class="feature-row" data-reveal="fade">
-        <div class="feature-item">
-          <i class="ph ph-seal-check"></i>
-          <h4>Custom Monograms</h4>
-          <p>Hand-pressed wax stamp seals</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-sparkle"></i>
-          <h4>Foil Stamping</h4>
-          <p>Metallic gold &amp; rose gold accents</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-file-text"></i>
-          <h4>Digital Proofing</h4>
-          <p>24-hour complimentary proof review</p>
-        </div>
-        <div class="feature-item">
-          <i class="ph ph-palette"></i>
-          <h4>Palette Matching</h4>
-          <p>Custom ribbon &amp; paper swatch matching</p>
-        </div>
-      </div>
-    </div>
 
   </main>
 
@@ -332,7 +422,8 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="index.html" class="logo"><img src="assets/images/aura-logo.svg" alt="Aura Favors"></a>
-          <p class="footer-about">Premier wedding favor &amp; custom gift studio. Crafting hand-poured candles, organic bath teas, and custom monogrammed keepsakes for fine celebrations.</p>
+          <p class="footer-about">Premier wedding favor &amp; custom gift studio. Crafting hand-poured candles, organic
+            bath teas, and custom monogrammed keepsakes for fine celebrations.</p>
           <div class="footer-social">
             <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
             <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
@@ -397,4 +488,5 @@
   <script src="assets/js/shop.js"></script>
   <script src="assets/js/checkout.js"></script>
 </body>
+
 </html>
