@@ -6633,10 +6633,21 @@ select.form-control option {
 /* ==========================================================================
    Branding Showcase Extended Architecture
    ========================================================================== */
-.branding-showcase-section {
-  padding-bottom: var(--space-12);
-  margin-bottom: var(--space-8);
-  border-bottom: 1px solid var(--color-hairline);
+body.branding-page .page-header {
+  margin-bottom: 0 !important;
+  padding-bottom: var(--space-2) !important;
+}
+
+body.branding-page .page-header .subtext {
+  margin-bottom: 0 !important;
+}
+
+body.branding-page .page-header + section,
+body.branding-page .branding-showcase-section {
+  padding-top: 0 !important;
+  padding-bottom: var(--space-8);
+  margin-bottom: 0;
+  border-bottom: none;
   box-sizing: border-box;
 }
 
@@ -6646,9 +6657,14 @@ select.form-control option {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-3);
-  margin: var(--space-6) auto var(--space-10);
+  margin: var(--space-3) auto var(--space-5);
   width: 100%;
   box-sizing: border-box;
+}
+
+.showcase-nav-pills + .showcase-block .showcase-block-header,
+#creative-concepts .showcase-block-header {
+  margin-bottom: var(--space-5);
 }
 
 .pill-tab {
@@ -6699,7 +6715,8 @@ select.form-control option {
 }
 
 .showcase-block {
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-10);
+  scroll-margin-top: calc(var(--nav-h) + var(--space-4));
 }
 
 .showcase-block-header {
@@ -6868,8 +6885,8 @@ select.form-control option {
   box-shadow: 0 16px 40px rgba(44, 30, 33, 0.05);
   padding: var(--space-10) var(--space-8);
   text-align: center;
-  margin-top: var(--space-12);
-  margin-bottom: var(--space-8);
+  margin-top: var(--space-8);
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7010,7 +7027,7 @@ select.form-control option {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin: var(--space-4) auto var(--space-8);
+    margin: var(--space-2) auto var(--space-4) !important;
     width: 100%;
   }
 
@@ -7188,11 +7205,26 @@ select.form-control option {
     text-align: center;
   }
 
-  /* Pre-footer CTA Banner in 368px */
+  /* Pre-footer CTA Banner and Page Header in 368px */
+  body.branding-page .page-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 8px !important;
+  }
+
+  body.branding-page .page-header .subtext {
+    margin-bottom: 0 !important;
+  }
+
+  body.branding-page .branding-showcase-section {
+    padding-top: 0 !important;
+    padding-bottom: var(--space-4) !important;
+    margin-bottom: 0 !important;
+  }
+
   .showcase-transition-banner {
     padding: 36px 16px !important;
-    margin-top: var(--space-8) !important;
-    margin-bottom: var(--space-4) !important;
+    margin-top: var(--space-6) !important;
+    margin-bottom: 0 !important;
     border: none !important;
   }
 
